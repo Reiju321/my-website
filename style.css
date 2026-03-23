@@ -600,22 +600,22 @@ img {
 
 .flow-steps {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 0;
   margin-top: 48px;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flow-step {
   background: #fef8f4;
   border: 2px solid #f5e0d0;
   border-radius: 20px;
-  padding: 28px 20px;
+  padding: 28px 32px;
   text-align: center;
-  flex: 1;
-  min-width: 150px;
-  max-width: 200px;
+  width: 100%;
   position: relative;
 }
 
@@ -657,11 +657,10 @@ img {
 }
 
 .flow-arrow {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #e8c0a8;
-  align-self: center;
-  padding: 0 4px;
-  margin-top: -20px;
+  text-align: center;
+  padding: 4px 0;
 }
 
 /* ===========================
@@ -1007,19 +1006,8 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .flow-steps {
-    gap: 8px;
-  }
-
   .flow-step {
-    min-width: 130px;
-    max-width: 160px;
-    padding: 24px 14px;
-  }
-
-  .flow-arrow {
-    font-size: 1rem;
-    padding: 0 2px;
+    padding: 24px 20px;
   }
 
   .area-box {
