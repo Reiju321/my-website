@@ -1046,6 +1046,11 @@ img {
     width: 100%;
   }
 
+  .price-table tbody {
+    padding: 14px 14px 2px;
+    display: block;
+  }
+
   .price-table tr {
     background: #fef8f4;
     border: 2px solid #f5e0d0;
