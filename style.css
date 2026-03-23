@@ -1028,6 +1028,72 @@ img {
     padding: 12px 12px;
     font-size: 0.82rem;
   }
+}
+
+/* 423px専用：テーブルをカード形式に変換 */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .price-table thead {
+    display: none;
+  }
+
+  .price-table,
+  .price-table tbody,
+  .price-table tr,
+  .price-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .price-table tr {
+    background: #fef8f4;
+    border: 1.5px solid #f5e0d0;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 16px;
+    border-bottom: 1.5px solid #f5e0d0 !important;
+  }
+
+  .price-table tr.price-popular {
+    background: #fff8f4;
+    border-color: #e8613a;
+  }
+
+  .price-table td {
+    border: none;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .price-table td::before {
+    content: attr(data-label) "：";
+    font-size: 0.72rem;
+    color: #7a5a47;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .price-table td.price-amount {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #e8613a;
+  }
+
+  .price-block-title {
+    font-size: 0.9rem;
+    padding: 14px 20px;
+  }
+
+  .popular-badge {
+    margin-left: 6px;
+  }
 
   .price-amount {
     font-size: 1.1rem;
