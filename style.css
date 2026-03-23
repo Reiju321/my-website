@@ -515,10 +515,8 @@ img {
 }
 
 .price-block {
-  background: #fff;
+  background: transparent;
   border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-  overflow: hidden;
 }
 
 .price-block-title {
@@ -1050,16 +1048,16 @@ img {
 
   .price-table tr {
     background: #fef8f4;
-    border: 1.5px solid #f5e0d0;
+    border: 2px solid #f5e0d0;
     border-radius: 14px;
     margin-bottom: 12px;
     padding: 16px;
-    border-bottom: 1.5px solid #f5e0d0 !important;
+    overflow: visible;
   }
 
   .price-table tr.price-popular {
     background: #fff8f4;
-    border-color: #e8613a;
+    border: 2.5px solid #e8613a;
   }
 
   .price-table td {
