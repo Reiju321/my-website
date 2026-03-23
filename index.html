@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あなたへえがお｜高齢者おしゃべりサービス</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="あなたへえがお" class="logo-img" />
+    </div>
+    <nav class="nav">
+      <a href="#services">サービス</a>
+      <a href="#features">サポート内容</a>
+      <a href="#price">料金</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <a href="#contact" class="header-cta">無料相談はこちら</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="sp-nav" id="spNav">
+    <a href="#services" onclick="closeMenu()">サービス</a>
+    <a href="#features" onclick="closeMenu()">サポート内容</a>
+    <a href="#price" onclick="closeMenu()">料金</a>
+    <a href="#contact" onclick="closeMenu()">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <!-- 背景スライドショー -->
+  <div class="hero-slideshow">
+    <div class="hero-slide active" style="background-image:url('photo1.png')"></div>
+    <div class="hero-slide" style="background-image:url('photo2.png')"></div>
+    <div class="hero-slide" style="background-image:url('photo3.png')"></div>
+    <div class="hero-slide" style="background-image:url('photo4.png')"></div>
+    <div class="hero-slide" style="background-image:url('photo5.png')"></div>
+  </div>
+  <!-- テキスト可読性のためのオーバーレイ -->
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <p class="hero-sub">高齢者専門おしゃべりサービス</p>
+    <h1 class="hero-title">
+      笑顔のある毎日を、<br />
+      離れていても。
+    </h1>
+    <p class="hero-desc">
+      お父さん、お母さんが元気でいるか心配ではありませんか？<br />
+      えがおは、高齢者のおしゃべり相手をしながら、<br class="pc-br" />
+      離れて暮らすご家族へ「安心」をお届けするサービスです。
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">無料相談してみる</a>
+      <a href="#services" class="btn-secondary">サービスを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- 課題提起 -->
+<section class="problem">
+  <div class="container">
+    <p class="section-label">こんなお悩みはありませんか？</p>
+    <h2 class="section-title">離れて暮らす親の<br />「見えない不安」</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="problem-icon">📞</span>
+        <p>電話しても「大丈夫」としか言わない</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🏥</span>
+        <p>薬をちゃんと飲んでいるか分からない</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🧠</span>
+        <p>認知症が始まっていないか心配</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🦴</span>
+        <p>転倒・骨折が怖い</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">💸</span>
+        <p>詐欺・悪徳商法に引っかからないか</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">😔</span>
+        <p>一人でいて寂しくしていないか</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービス一覧 -->
+<section class="services" id="services">
+  <div class="container">
+    <p class="section-label">私たちのサービス</p>
+    <h2 class="section-title">えがおの3つのサービス</h2>
+    <div class="service-cards">
+
+      <div class="service-card featured">
+        <div class="service-badge">おすすめ</div>
+        <div class="service-icon">✉️</div>
+        <h3>あなたへえがお便</h3>
+        <p class="service-tag">高齢者おしゃべり訪問・オンライン</p>
+        <p class="service-desc">
+          スタッフがご自宅を訪問またはオンラインで、楽しくお話し相手をしながら、
+          ご家族へ「見守りレポート」をお届けします。
+          おしゃべりの裏で11項目の安心サポートが機能します。
+        </p>
+        <a href="#features" class="btn-service">詳しく見る</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h3>えがおマッチ</h3>
+        <p class="service-tag">一般と高齢者のマッチングサービス</p>
+        <p class="service-desc">
+          地域の人々と高齢者をつなぐマッチングサービスです。
+          「話し相手になりたい」という気持ちを持つ一般の方と、
+          高齢者の方を温かくつなぎます。
+        </p>
+        <a href="#contact" class="btn-service">詳しく聞く</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>シニア傾聴師<br />資格講座</h3>
+        <p class="service-tag">おしゃべりを仕事にするオンラインスクール</p>
+        <p class="service-desc">
+          「おしゃべりを仕事にしたい」という方のためのオンライン資格講座。
+          シニア傾聴師として活躍するためのスキルを身につけられます。
+        </p>
+        <a href="#contact" class="btn-service">詳しく聞く</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- サポート内容（あなたへえがお便） -->
+<section class="features" id="features">
+  <div class="container">
+    <p class="section-label">あなたへえがお便</p>
+    <h2 class="section-title">11項目の安心サポート</h2>
+    <p class="section-desc">ただのおしゃべりではありません。会話の中に、ご家族を安心させる仕組みが詰まっています。</p>
+
+    <div class="features-grid">
+
+      <div class="feature-item">
+        <div class="feature-num">01</div>
+        <div class="feature-body">
+          <h4>家族への「見守りレポート」</h4>
+          <p>顔色・認知症のサイン・冷蔵庫の中などをチェックし、毎回詳細なレポートを離れて暮らすご家族へお届けします。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">02</div>
+        <div class="feature-body">
+          <h4>家族への「行動レポート」</h4>
+          <p>「今から行きます」「着きました」「終わりました」とリアルタイムに報告。会話場面の録画もお送りします。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">03</div>
+        <div class="feature-body">
+          <h4>お薬カレンダーのチェック</h4>
+          <p>今日の薬が飲まれているかをカレンダーで確認し、ご家族へ報告。薬の飲み忘れという大きな悩みを解決します。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">04</div>
+        <div class="feature-body">
+          <h4>スマホレッスン</h4>
+          <p>会話の中でスマホの使い方をレッスン。目標は「子供・孫とLINEテレビ電話ができるようになること」です。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">05</div>
+        <div class="feature-body">
+          <h4>おつかい代行</h4>
+          <p>お水やお米など重いものをスタッフが訪問の途中に購入してお届けします（商品代は実費）。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">06</div>
+        <div class="feature-body">
+          <h4>昔の思い出レポート</h4>
+          <p>会話で出た「若い頃の楽しかった話」「子育ての思い出」を記録し、月1回ご家族へお届けします。エンディングノートの代わりにもなります。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">07</div>
+        <div class="feature-body">
+          <h4>詐欺・悪徳商法の防犯チェック</h4>
+          <p>「最近変な電話はありましたか？」などの会話から不審な郵便物・請求書をチェック。不審な点があれば即座にご家族へアラートを出します。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">08</div>
+        <div class="feature-body">
+          <h4>転倒防止の導線チェック</h4>
+          <p>足元の延長コードや滑りやすいマットなど、転倒・骨折の原因になるものを確認し、安全な場所へ移動します。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">09</div>
+        <div class="feature-body">
+          <h4>防災グッズ・備蓄チェック</h4>
+          <p>月1回、非常食・水の賞味期限や懐中電灯の電池を確認。「いざという時も大丈夫」という安心をご家族へお届けします。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">10</div>
+        <div class="feature-body">
+          <h4>栄養の偏りレポート</h4>
+          <p>「この1週間、何を食べましたか？」という会話から食事内容を把握し、栄養の偏りをご家族へ報告。親の健康寿命を延ばします。</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-num">11</div>
+        <div class="feature-body">
+          <h4>写真整理・生前整理サポート</h4>
+          <p>昔のアルバムを一緒に見ながらおしゃべり。写真のデータ化や整理も少しずつ進めます。子供世代が悩む「実家の片付け」を自然に解決します。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section class="price" id="price">
+  <div class="container">
+    <p class="section-label">料金プラン</p>
+    <h2 class="section-title">あなたへえがお便<br />料金プラン</h2>
+
+    <div class="price-tables">
+
+      <div class="price-block">
+        <h3 class="price-block-title">訪問 /（50分）</h3>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>プラン</th>
+              <th>月額</th>
+              <th>1回あたり</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>週1回（月4回）</td>
+              <td class="price-amount">¥18,000</td>
+              <td>¥4,500</td>
+            </tr>
+            <tr class="price-popular">
+              <td>週2回（月8回）<span class="popular-badge">人気</span></td>
+              <td class="price-amount">¥33,000</td>
+              <td>¥4,125</td>
+            </tr>
+            <tr>
+              <td>週3回（月12回）</td>
+              <td class="price-amount">¥44,000</td>
+              <td>¥3,666</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="price-block">
+        <h3 class="price-block-title">訪問 + オンライン（30分）混合プラン</h3>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>プラン</th>
+              <th>月額</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="price-popular">
+              <td>ハイブリッドプラン<span class="popular-badge">おすすめ</span></td>
+              <td class="price-amount">¥8,900</td>
+              <td>週2回 × 30分（月8回）<br />うち月1回は訪問・残り7回はオンライン</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <p class="price-note">※ おつかい代行の商品代は実費となります。<br />※ 詳しい料金・エリアについてはお気軽にご相談ください。</p>
+
+    <div class="price-cta">
+      <a href="#contact" class="btn-primary">まずは無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ご利用の流れ -->
+<section class="flow" id="flow">
+  <div class="container">
+    <p class="section-label">ご利用の流れ</p>
+    <h2 class="section-title">お申し込みから<br />サービス開始まで</h2>
+    <p class="section-desc">初めての方も安心。丁寧にご案内します。</p>
+    <div class="flow-steps">
+
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-icon">📞</div>
+        <h4>お問い合わせ</h4>
+        <p>お電話・LINE・フォームからお気軽にご連絡ください。サービス内容や不明な点をご説明します。</p>
+      </div>
+
+      <div class="flow-arrow">▶</div>
+
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-icon">📋</div>
+        <h4>情報のご登録</h4>
+        <p>お名前・電話番号・メールアドレスなど、基本情報をご登録いただきます。</p>
+      </div>
+
+      <div class="flow-arrow">▶</div>
+
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-icon">💬</div>
+        <h4>打ち合わせ・<br />プラン確定</h4>
+        <p>ご希望の頻度や内容をお伺いし、ぴったりのプランをご提案します。</p>
+      </div>
+
+      <div class="flow-arrow">▶</div>
+
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-icon">💳</div>
+        <h4>料金のお支払い</h4>
+        <p>銀行振込にて前払いをお願いしております。入金確認後に正式なご予約確定となります。</p>
+      </div>
+
+      <div class="flow-arrow">▶</div>
+
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <div class="flow-icon">😊</div>
+        <h4>サービス開始</h4>
+        <p>お約束の日時にスタッフが訪問。心を込めておしゃべりやサポートをいたします。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 対象エリア -->
+<section class="area" id="area">
+  <div class="container">
+    <p class="section-label">対象エリア</p>
+    <h2 class="section-title">現在のサービスエリア</h2>
+    <div class="area-box">
+      <div class="area-icon">📍</div>
+      <div class="area-body">
+        <h3 class="area-name">兵庫県 宝塚市内 全域</h3>
+        <p class="area-note">※ 宝塚市外の近隣エリアへの拡大も順次検討中です。<br />現時点では市内のみの訪問対応となりますのでご了承ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- よくあるご質問 -->
+<section class="faq" id="faq">
+  <div class="container">
+    <p class="section-label">よくあるご質問</p>
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-q">どんなスタッフが来ますか？</summary>
+        <p class="faq-a">当社の研修を受けた、傾聴スキルを持つスタッフが伺います。プライバシーを厳守し、安心してお話しいただけるよう誠実に対応いたします。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">おしゃべりが苦手でも大丈夫ですか？</summary>
+        <p class="faq-a">もちろん大丈夫です。スタッフがお客様のペースに合わせてお話を引き出しますので、無理に話す必要はありません。ふと思い出したことなど、なんでも自由にお話しください。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">お茶やお菓子の準備は必要ですか？</summary>
+        <p class="faq-a">一切不要です。お気遣いなく、リラックスした状態でお待ちください。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">会話の内容はすべて家族に報告されますか？</summary>
+        <p class="faq-a">ご家族へは「お元気に過ごされていたか」「健康状態に変化はないか」といった見守り内容を報告します。会話の内容は尊厳を守るためプライバシーに十分配慮いたします。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">支払い方法を教えてください。</summary>
+        <p class="faq-a">銀行振込による前払い方式を採用しております。詳細はお申し込み時にご案内いたします。</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="section-label">お問い合わせ</p>
+    <h2 class="section-title">まずはお気軽に<br />ご相談ください</h2>
+    <p class="section-desc">無料相談を承っております。お電話・LINE・フォームからどうぞ。</p>
+
+    <div class="contact-options">
+      <a href="tel:0120-000-000" class="contact-card contact-tel">
+        <span class="contact-icon">📞</span>
+        <div>
+          <p class="contact-label">お電話でのご相談</p>
+          <p class="contact-info">0120-000-000</p>
+          <p class="contact-hours">受付時間 9:00〜18:00（土日祝除く）</p>
+        </div>
+      </a>
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="contact-card contact-line">
+        <span class="contact-icon">💬</span>
+        <div>
+          <p class="contact-label">LINEでのご相談</p>
+          <p class="contact-info">公式LINEを追加する</p>
+          <p class="contact-hours">24時間受付・お気軽にどうぞ</p>
+        </div>
+      </a>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3 class="form-title">お問い合わせフォーム</h3>
+      <div class="form-row">
+        <label for="name">お名前 <span class="required">必須</span></label>
+        <input type="text" id="name" name="name" placeholder="山田 花子" required />
+      </div>
+      <div class="form-row">
+        <label for="phone">電話番号</label>
+        <input type="tel" id="phone" name="phone" placeholder="090-0000-0000" />
+      </div>
+      <div class="form-row">
+        <label for="email">メールアドレス <span class="required">必須</span></label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+      </div>
+      <div class="form-row">
+        <label for="service">ご興味のあるサービス</label>
+        <select id="service" name="service">
+          <option value="">選択してください</option>
+          <option value="egaobinn">あなたへえがお便</option>
+          <option value="match">えがおマッチ</option>
+          <option value="school">シニア傾聴師 資格講座</option>
+          <option value="other">その他・分からない</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">送信する</button>
+    </form>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="あなたへえがお" class="logo-img footer-logo-img" />
+        <p class="footer-tagline">笑顔のある毎日を、離れていても。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">サービス一覧</a>
+        <a href="#features">サポート内容</a>
+        <a href="#price">料金</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2024 あなたへえがお All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    spNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+  function closeMenu() {
+    spNav.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+
+  // ヒーロー背景スライドショー（ふわっとフェード）
+  const slides = document.querySelectorAll('.hero-slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+
+  // スムーススクロール
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

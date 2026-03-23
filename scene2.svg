@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8dcff"/>
+      <stop offset="55%" stop-color="#ddf0ff"/>
+      <stop offset="100%" stop-color="#eef8ff"/>
+    </linearGradient>
+    <linearGradient id="ground2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8d890"/>
+      <stop offset="100%" stop-color="#98c070"/>
+    </linearGradient>
+    <linearGradient id="path2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0d0b0"/>
+      <stop offset="100%" stop-color="#d0c090"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1440" height="600" fill="url(#sky2)"/>
+  <!-- Clouds -->
+  <g opacity="0.85">
+    <ellipse cx="200" cy="120" rx="85" ry="42" fill="white"/>
+    <ellipse cx="162" cy="132" rx="52" ry="36" fill="white"/>
+    <ellipse cx="248" cy="130" rx="58" ry="34" fill="white"/>
+  </g>
+  <g opacity="0.75">
+    <ellipse cx="920" cy="80" rx="72" ry="36" fill="white"/>
+    <ellipse cx="888" cy="90" rx="48" ry="32" fill="white"/>
+    <ellipse cx="958" cy="88" rx="50" ry="28" fill="white"/>
+  </g>
+  <g opacity="0.65">
+    <ellipse cx="1260" cy="115" rx="62" ry="32" fill="white"/>
+    <ellipse cx="1232" cy="122" rx="42" ry="27" fill="white"/>
+    <ellipse cx="1292" cy="120" rx="44" ry="25" fill="white"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="1330" cy="100" r="62" fill="#ffe060" opacity="0.85"/>
+  <circle cx="1330" cy="100" r="50" fill="#ffd040"/>
+  <g stroke="#ffe060" stroke-width="4" opacity="0.55">
+    <line x1="1330" y1="18" x2="1330" y2="0"/>
+    <line x1="1388" y1="42" x2="1403" y2="27"/>
+    <line x1="1412" y1="100" x2="1430" y2="100"/>
+    <line x1="1388" y1="158" x2="1403" y2="173"/>
+    <line x1="1272" y1="42" x2="1257" y2="27"/>
+    <line x1="1248" y1="100" x2="1230" y2="100"/>
+    <line x1="1272" y1="158" x2="1257" y2="173"/>
+  </g>
+  <!-- Ground -->
+  <rect x="0" y="482" width="1440" height="118" fill="url(#ground2)"/>
+  <rect x="0" y="480" width="1440" height="5" fill="#a8c880"/>
+  <!-- Walking path -->
+  <path d="M0 560 Q720 490 1440 560 L1440 600 L0 600 Z" fill="url(#path2)" opacity="0.7"/>
+  <!-- Trees LEFT -->
+  <g transform="translate(60,180)">
+    <rect x="42" y="210" width="22" height="190" fill="#7a5030"/>
+    <circle cx="53" cy="190" r="72" fill="#5a9040"/>
+    <circle cx="22" cy="218" r="52" fill="#4a8030"/>
+    <circle cx="84" cy="212" r="56" fill="#6aa048"/>
+    <circle cx="55" cy="178" r="40" fill="#70aa50"/>
+  </g>
+  <g transform="translate(175,230)">
+    <rect x="36" y="185" width="19" height="155" fill="#7a5030"/>
+    <circle cx="45" cy="170" r="62" fill="#60a045"/>
+    <circle cx="18" cy="195" r="44" fill="#509035"/>
+    <circle cx="72" cy="188" r="46" fill="#70aa45"/>
+  </g>
+  <!-- Trees RIGHT -->
+  <g transform="translate(1270,180)">
+    <rect x="42" y="210" width="22" height="190" fill="#7a5030"/>
+    <circle cx="53" cy="190" r="72" fill="#5a9040"/>
+    <circle cx="22" cy="218" r="52" fill="#4a8030"/>
+    <circle cx="84" cy="212" r="56" fill="#6aa048"/>
+    <circle cx="55" cy="178" r="40" fill="#70aa50"/>
+  </g>
+  <g transform="translate(1170,230)">
+    <rect x="36" y="185" width="19" height="155" fill="#7a5030"/>
+    <circle cx="45" cy="170" r="62" fill="#60a045"/>
+    <circle cx="18" cy="195" r="44" fill="#509035"/>
+    <circle cx="72" cy="188" r="46" fill="#70aa45"/>
+  </g>
+  <!-- ELDERLY MAN (left) -->
+  <!-- Legs -->
+  <rect x="588" y="455" width="30" height="88" rx="12" fill="#6080a8" transform="rotate(8 588 455)"/>
+  <rect x="622" y="455" width="30" height="88" rx="12" fill="#6888b0" transform="rotate(-5 622 455)"/>
+  <!-- Shoes -->
+  <ellipse cx="598" cy="545" rx="24" ry="11" fill="#3a2818"/>
+  <ellipse cx="643" cy="538" rx="24" ry="11" fill="#3a2818"/>
+  <!-- Pants waist -->
+  <ellipse cx="622" cy="458" rx="56" ry="30" fill="#7090b8"/>
+  <!-- Body/cardigan -->
+  <ellipse cx="622" cy="378" rx="64" ry="80" fill="#c8a870"/>
+  <ellipse cx="622" cy="350" rx="22" ry="11" fill="#d8b880" opacity="0.75"/>
+  <!-- Arms -->
+  <ellipse cx="546" cy="388" rx="18" ry="54" fill="#d8b880" transform="rotate(-20 546 388)"/>
+  <ellipse cx="698" cy="398" rx="18" ry="52" fill="#d8b880" transform="rotate(22 698 398)"/>
+  <circle cx="520" cy="432" r="15" fill="#f5d0b0"/>
+  <circle cx="722" cy="428" r="15" fill="#f5d0b0"/>
+  <!-- Cane -->
+  <line x1="722" y1="428" x2="755" y2="542" stroke="#8b6040" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="755" cy="544" rx="12" ry="5" fill="#7a5030"/>
+  <!-- Neck -->
+  <rect x="606" y="315" width="32" height="35" rx="8" fill="#f5d0b0"/>
+  <!-- Head -->
+  <circle cx="622" cy="283" r="56" fill="#f5d0b0"/>
+  <!-- Cap -->
+  <ellipse cx="622" cy="242" rx="58" ry="22" fill="#6080a8"/>
+  <ellipse cx="622" cy="235" rx="56" ry="18" fill="#7090b8"/>
+  <rect x="564" y="234" width="116" height="18" rx="5" fill="#7090b8"/>
+  <ellipse cx="572" cy="246" rx="14" ry="7" fill="#6080a8"/>
+  <!-- Gray sideburns -->
+  <ellipse cx="570" cy="272" rx="14" ry="22" fill="#c0c0c0"/>
+  <ellipse cx="674" cy="272" rx="14" ry="22" fill="#c0c0c0"/>
+  <!-- Glasses -->
+  <rect x="595" y="270" width="26" height="20" rx="8" fill="none" stroke="#8b6040" stroke-width="2"/>
+  <rect x="626" y="270" width="26" height="20" rx="8" fill="none" stroke="#8b6040" stroke-width="2"/>
+  <line x1="621" y1="278" x2="626" y2="278" stroke="#8b6040" stroke-width="2"/>
+  <line x1="595" y1="278" x2="589" y2="274" stroke="#8b6040" stroke-width="2"/>
+  <line x1="652" y1="278" x2="658" y2="274" stroke="#8b6040" stroke-width="2"/>
+  <!-- Eyes -->
+  <circle cx="608" cy="278" r="5" fill="#4a3020"/>
+  <circle cx="610" cy="276" r="2" fill="white"/>
+  <circle cx="639" cy="278" r="5" fill="#4a3020"/>
+  <circle cx="641" cy="276" r="2" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M598 266 Q608 260 618 266" fill="none" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M629 266 Q639 260 649 266" fill="none" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M618 295 Q621 302 624 295" fill="none" stroke="#d4a888" stroke-width="1.5"/>
+  <!-- Smile -->
+  <path d="M606 310 Q622 326 638 310" fill="none" stroke="#b07050" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="600" cy="300" r="14" fill="#f4a0a0" opacity="0.28"/>
+  <circle cx="644" cy="300" r="14" fill="#f4a0a0" opacity="0.28"/>
+  <!-- Wrinkles -->
+  <path d="M594 286 Q588 292 594 298" fill="none" stroke="#e0b898" stroke-width="1.2"/>
+  <path d="M650 286 Q656 292 650 298" fill="none" stroke="#e0b898" stroke-width="1.2"/>
+  <!-- YOUNG MAN (right, taller) -->
+  <!-- Legs -->
+  <rect x="800" y="448" width="30" height="95" rx="12" fill="#3860a0" transform="rotate(-8 800 448)"/>
+  <rect x="834" y="448" width="30" height="95" rx="12" fill="#4070a8" transform="rotate(5 834 448)"/>
+  <!-- Sneakers -->
+  <ellipse cx="808" cy="548" rx="26" ry="12" fill="#e8e8f0"/>
+  <ellipse cx="849" cy="542" rx="26" ry="12" fill="#e8e8f0"/>
+  <ellipse cx="808" cy="546" rx="22" ry="7" fill="#c0c0d0"/>
+  <ellipse cx="849" cy="540" rx="22" ry="7" fill="#c0c0d0"/>
+  <!-- Pants waist -->
+  <ellipse cx="832" cy="452" rx="56" ry="30" fill="#4870a8"/>
+  <!-- Body/t-shirt -->
+  <ellipse cx="832" cy="362" rx="64" ry="90" fill="#e87840"/>
+  <ellipse cx="832" cy="325" rx="24" ry="11" fill="#f08850" opacity="0.8"/>
+  <!-- Arms -->
+  <ellipse cx="756" cy="368" rx="20" ry="60" fill="#f5d0b0" transform="rotate(-18 756 368)"/>
+  <ellipse cx="908" cy="374" rx="20" ry="58" fill="#f5d0b0" transform="rotate(18 908 374)"/>
+  <circle cx="727" cy="418" r="17" fill="#f5d0b0"/>
+  <circle cx="936" cy="414" r="17" fill="#f5d0b0"/>
+  <!-- Neck -->
+  <rect x="814" y="296" width="36" height="37" rx="10" fill="#f5d0b0"/>
+  <!-- Head -->
+  <circle cx="832" cy="260" r="60" fill="#f5d0b0"/>
+  <!-- Dark neat hair -->
+  <ellipse cx="832" cy="213" rx="62" ry="38" fill="#1a1008"/>
+  <ellipse cx="780" cy="238" rx="26" ry="42" fill="#1a1008"/>
+  <ellipse cx="884" cy="238" rx="26" ry="42" fill="#1a1008"/>
+  <ellipse cx="832" cy="208" rx="48" ry="20" fill="#2a2018"/>
+  <!-- Eyes -->
+  <ellipse cx="814" cy="254" rx="10" ry="11" fill="white"/>
+  <circle cx="815" cy="255" r="6.5" fill="#1a1008"/>
+  <circle cx="817" cy="252" r="2.5" fill="white"/>
+  <ellipse cx="850" cy="254" rx="10" ry="11" fill="white"/>
+  <circle cx="851" cy="255" r="6.5" fill="#1a1008"/>
+  <circle cx="853" cy="252" r="2.5" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M802 240 Q814 234 826 240" fill="none" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+  <path d="M838 240 Q850 234 862 240" fill="none" stroke="#1a1008" stroke-width="3" stroke-linecap="round"/>
+  <path d="M830 272 Q832 279 834 272" fill="none" stroke="#d4a888" stroke-width="1.5"/>
+  <!-- Big smile -->
+  <path d="M814 288 Q832 308 850 288" fill="none" stroke="#c06840" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="794" cy="276" r="16" fill="#f4a0a0" opacity="0.4"/>
+  <circle cx="870" cy="276" r="16" fill="#f4a0a0" opacity="0.4"/>
+  <!-- Birds -->
+  <g fill="none" stroke="#7888a8" stroke-width="2.5" stroke-linecap="round">
+    <path d="M395 78 Q407 68 419 78"/>
+    <path d="M424 70 Q436 60 448 70"/>
+    <path d="M608 48 Q620 38 632 48"/>
+  </g>
+  <!-- Floating heart -->
+  <text x="720" y="320" font-size="24" fill="#e86060" opacity="0.30" transform="rotate(-10 720 320)">♥</text>
+  <text x="748" y="292" font-size="17" fill="#f0a040" opacity="0.25" transform="rotate(8 748 292)">♥</text>
+  <!-- Flowers -->
+  <g transform="translate(348,486)">
+    <circle cx="0" cy="0" r="8" fill="#f4d040"/>
+    <ellipse cx="0" cy="-14" rx="6" ry="10" fill="#f8f070"/>
+    <ellipse cx="13" cy="-9" rx="6" ry="10" fill="#f8f070" transform="rotate(72 13 -9)"/>
+    <ellipse cx="8" cy="12" rx="6" ry="10" fill="#f8f070" transform="rotate(144 8 12)"/>
+    <ellipse cx="-8" cy="12" rx="6" ry="10" fill="#f8f070" transform="rotate(216 -8 12)"/>
+    <ellipse cx="-13" cy="-9" rx="6" ry="10" fill="#f8f070" transform="rotate(288 -13 -9)"/>
+  </g>
+  <g transform="translate(1108,492)">
+    <circle cx="0" cy="0" r="7" fill="#f090b0"/>
+    <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f8b8d0"/>
+    <ellipse cx="11" cy="-8" rx="5" ry="9" fill="#f8b8d0" transform="rotate(72 11 -8)"/>
+    <ellipse cx="7" cy="10" rx="5" ry="9" fill="#f8b8d0" transform="rotate(144 7 10)"/>
+    <ellipse cx="-7" cy="10" rx="5" ry="9" fill="#f8b8d0" transform="rotate(216 -7 10)"/>
+    <ellipse cx="-11" cy="-8" rx="5" ry="9" fill="#f8b8d0" transform="rotate(288 -11 -8)"/>
+  </g>
+</svg>
