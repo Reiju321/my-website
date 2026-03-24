@@ -3,6 +3,33 @@
 ============================================= */
 
 /* ===========================
+   テキスト改行制御
+=========================== */
+
+/* 段落・リスト・テーブルセル:
+   word-break: keep-all  → 日本語の自然な分節を尊重（句読点で折返）
+   overflow-wrap: anywhere → 容器からはみ出す場合のみ任意の位置で強制折返し */
+p,
+li,
+td,
+th {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 見出しも語の途中で折り返させない */
+h1, h2, h3, h4 {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 意味のまとまりを一行に保つユーティリティ
+   重要フレーズに class="nowrap" を付けて使用 */
+.nowrap {
+  display: inline-block;
+}
+
+/* ===========================
    features セクション上書き
 =========================== */
 .features {
