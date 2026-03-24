@@ -296,6 +296,7 @@ img {
 .hero-desc {
   font-size: 1rem;
   color: #5a3e2b;
+  text-align: center;
   margin-bottom: 36px;
   line-height: 1.9;
 }
