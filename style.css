@@ -375,6 +375,9 @@ img {
   font-size: 0.97rem;
   margin-bottom: 48px;
   line-height: 1.9;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===========================

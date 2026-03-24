@@ -11,11 +11,11 @@ p,
 li,
 td,
 th {
-  word-break: normal;       /* 語の途中で折り返さない */
-  overflow-wrap: anywhere;  /* 容器からはみ出す場合のみ強制折返し */
-  line-break: strict;       /* 禁則処理（句読点・閉じ括弧を行頭に出さない） */
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
   line-height: 2.0;
-  text-align: justify;      /* 両端揃えで余白を均等分散 */
+  text-align: left;
 }
 
 /* 見出しの禁則処理 */
