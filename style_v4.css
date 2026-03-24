@@ -268,15 +268,7 @@ h1, h2, h3, h4 {
   padding: 14px 24px;
 }
 
-/* ヘッダーCTA（デスクトップのみ表示） */
-.header-cta {
-  border-radius: 12px;
-  font-size: 15px;   /* ヘッダーは狭いのでやや小さめ */
-  min-height: 44px;
-  padding: 10px 20px;
-  display: inline-flex;
-  align-items: center;
-}
+/* ヘッダーCTA（削除済み） */
 
 /* お問い合わせカード（電話・LINE） */
 .contact-card {
