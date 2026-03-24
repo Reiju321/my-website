@@ -171,6 +171,23 @@ img {
   border-bottom: 1px solid #f5ede5;
 }
 
+.sp-nav-cta {
+  background: #e8613a;
+  color: #fff !important;
+  padding: 14px 20px !important;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  border-bottom: none !important;
+  margin-top: 8px;
+  display: block;
+}
+
+.sp-nav-cta:hover {
+  background: #c94f2c;
+}
+
 .sp-nav.open {
   display: flex;
 }
