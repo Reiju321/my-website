@@ -29,7 +29,7 @@
 
 .story-inner {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
   gap: 72px;
   align-items: start;
 }

@@ -5,10 +5,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 0;
+}
+
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -17,6 +25,9 @@ body {
   line-height: 1.8;
   color: #3d2b1f;
   background: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 a {
@@ -1026,12 +1037,14 @@ img {
     padding: 12px 12px;
     font-size: 0.82rem;
   }
-}
 
-/* 423px専用：テーブルをカード形式に変換 */
-@media (max-width: 768px) {
   .container {
     padding: 0 20px;
+  }
+
+  /* はみ出し防止 */
+  section, div, header, footer, nav {
+    max-width: 100%;
   }
 }
 
