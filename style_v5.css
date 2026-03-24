@@ -24,7 +24,7 @@
    代表の想い（Story）
 =========================== */
 .story {
-  padding: 96px 0;
+  padding: 144px 0;
 }
 
 .story-inner {
@@ -152,7 +152,7 @@
    安心サポート v5（大型カード＋画像枠）
 =========================== */
 .support-v5 {
-  padding: 96px 0;
+  padding: 144px 0;
 }
 
 .support-intro {
@@ -279,7 +279,7 @@
 =========================== */
 .area-compact {
   background: #fff8f4;
-  padding: 48px 0;
+  padding: 72px 0;
   border-top: 1px solid #f5e0d0;
 }
 
@@ -342,7 +342,7 @@
 
 @media (max-width: 768px) {
   .story {
-    padding: 64px 0;
+    padding: 88px 0;
   }
 
   .story-inner {
@@ -369,7 +369,7 @@
   }
 
   .support-v5 {
-    padding: 64px 0;
+    padding: 88px 0;
   }
 
   .support-cards-v5 {
@@ -393,7 +393,7 @@
 
 @media (max-width: 480px) {
   .story {
-    padding: 52px 0;
+    padding: 72px 0;
   }
 
   .story-paragraph {
@@ -401,7 +401,7 @@
   }
 
   .support-v5 {
-    padding: 52px 0;
+    padding: 72px 0;
   }
 
   .support-card-body {

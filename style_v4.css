@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
 =========================== */
 .features {
   background: #fafaf8;
-  padding: 96px 0;
+  padding: 144px 0;
 }
 
 /* 旧リスト形式を非表示 → 新カードで置き換え */
@@ -157,7 +157,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
   .features {
-    padding: 72px 0;
+    padding: 96px 0;
   }
 
   .feature-cards-grid {

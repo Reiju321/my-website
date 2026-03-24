@@ -29,9 +29,9 @@ img {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 48px;
 }
 
 /* ===========================
@@ -49,9 +49,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 6px 24px;
+  padding: 6px 48px;
   gap: 20px;
 }
 
@@ -154,7 +154,7 @@ img {
 =========================== */
 .hero {
   position: relative;
-  padding: 80px 24px 0;
+  padding: 80px 0 0;
   overflow: hidden;
 }
 
@@ -306,7 +306,7 @@ img {
    課題提起
 =========================== */
 .problem {
-  padding: 80px 0;
+  padding: 128px 0;
   background: #fff;
 }
 
@@ -347,7 +347,7 @@ img {
    サービス一覧
 =========================== */
 .services {
-  padding: 80px 0;
+  padding: 128px 0;
   background: linear-gradient(180deg, #fef8f4 0%, #fff8f0 100%);
 }
 
@@ -440,7 +440,7 @@ img {
    サポート内容
 =========================== */
 .features {
-  padding: 80px 0;
+  padding: 128px 0;
   background: #fff;
 }
 
@@ -503,7 +503,7 @@ img {
    料金
 =========================== */
 .price {
-  padding: 80px 0;
+  padding: 128px 0;
   background: linear-gradient(180deg, #fef8f4 0%, #fff8f0 100%);
 }
 
@@ -592,7 +592,7 @@ img {
    ご利用の流れ
 =========================== */
 .flow {
-  padding: 80px 0;
+  padding: 128px 0;
   background: #fff;
 }
 
@@ -665,7 +665,7 @@ img {
    対象エリア
 =========================== */
 .area {
-  padding: 80px 0;
+  padding: 128px 0;
   background: linear-gradient(180deg, #fef8f4 0%, #fff8f0 100%);
 }
 
@@ -704,7 +704,7 @@ img {
    FAQ
 =========================== */
 .faq {
-  padding: 80px 0;
+  padding: 128px 0;
   background: #fff;
 }
 
@@ -778,7 +778,7 @@ img {
    お問い合わせ
 =========================== */
 .contact {
-  padding: 80px 0;
+  padding: 128px 0;
   background: #fff;
 }
 
@@ -974,7 +974,7 @@ img {
   .header-cta { display: none; }
   .hamburger { display: flex; }
 
-  .hero { padding: 60px 20px 0; }
+  .hero { padding: 60px 0 0; }
   .hero-inner { padding-bottom: 60px; }
   .sp-br { display: inline; }
   .pc-br { display: none; }
@@ -1029,9 +1029,15 @@ img {
 }
 
 /* 423px専用：テーブルをカード形式に変換 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
   .price-table thead {
