@@ -1,0 +1,296 @@
+/* =============================================
+   style_v2.css — 高齢者向け読みやすさ強化版
+   style.css の上に重ねて適用する上書き用CSS
+============================================= */
+
+/* ===========================
+   1. 基本フォント・行間
+=========================== */
+body {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #333333;
+}
+
+p, li, td, th, label, select, input, textarea, summary {
+  font-size: 1rem; /* 18px基準 */
+  line-height: 1.9;
+  color: #333333;
+}
+
+h1, h2, h3, h4 {
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* ===========================
+   2. セクションの文字サイズ
+=========================== */
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #1a1a1a;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: #333333;
+  line-height: 1.9;
+}
+
+.section-label {
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   ヒーロー
+=========================== */
+.hero-title {
+  font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+  color: #1a1a1a;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: #333333;
+  line-height: 2;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   3. ボタン
+=========================== */
+.btn-primary {
+  font-size: 1.15rem;
+  padding: 20px 44px;
+}
+
+.btn-secondary {
+  font-size: 1.15rem;
+  padding: 20px 44px;
+}
+
+.btn-service {
+  font-size: 1rem;
+  padding: 16px 28px;
+}
+
+.btn-submit {
+  font-size: 1.15rem;
+  padding: 22px;
+}
+
+.header-cta {
+  font-size: 1rem;
+  padding: 14px 24px;
+}
+
+/* ===========================
+   課題提起
+=========================== */
+.problem-card p {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.problem-icon {
+  font-size: 2.4rem;
+}
+
+/* ===========================
+   サービスカード
+=========================== */
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.service-tag {
+  font-size: 0.88rem;
+}
+
+.service-desc {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.9;
+}
+
+/* ===========================
+   安心サポート
+=========================== */
+.feature-body h4 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.feature-body p {
+  font-size: 0.98rem;
+  color: #333333;
+  line-height: 1.9;
+}
+
+.feature-num {
+  font-size: 2rem;
+}
+
+/* ===========================
+   料金
+=========================== */
+.price-block-title {
+  font-size: 1.05rem;
+}
+
+.price-table th {
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.price-table td {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  color: #e8613a;
+}
+
+.price-note {
+  font-size: 0.92rem;
+  color: #444444;
+}
+
+.popular-badge {
+  font-size: 0.8rem;
+}
+
+/* ===========================
+   ご利用の流れ
+=========================== */
+.flow-step h4 {
+  font-size: 1.05rem;
+  color: #1a1a1a;
+}
+
+.flow-step p {
+  font-size: 0.98rem;
+  color: #333333;
+  line-height: 1.9;
+}
+
+/* ===========================
+   対象エリア
+=========================== */
+.area-name {
+  font-size: 1.5rem;
+}
+
+.area-note {
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.9;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faq-q {
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  padding: 22px 24px;
+}
+
+.faq-a {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.9;
+  padding: 18px 24px 22px 64px;
+}
+
+/* ===========================
+   お問い合わせ
+=========================== */
+.contact-label {
+  font-size: 0.88rem;
+}
+
+.contact-info {
+  font-size: 1.3rem;
+  color: #e8613a;
+}
+
+.contact-hours {
+  font-size: 0.85rem;
+  color: #444444;
+}
+
+.form-row label {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  font-size: 1rem;
+  padding: 16px 18px;
+  color: #333333;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+/* ===========================
+   ナビゲーション
+=========================== */
+.nav a {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.sp-nav a {
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+/* ===========================
+   フッター
+=========================== */
+.footer-tagline {
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  font-size: 0.95rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+}
+
+/* ===========================
+   スマホ追加対応
+=========================== */
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1.1rem;
+    padding: 18px 36px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+  }
+
+  .faq-a {
+    padding-left: 24px;
+  }
+}
