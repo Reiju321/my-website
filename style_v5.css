@@ -1,0 +1,418 @@
+/* =============================================
+   style_v5.css — ストーリーテリング大規模リデザイン
+============================================= */
+
+/* ===========================
+   セクション共通：背景テーマ
+=========================== */
+.story,
+.support-v5,
+.faq {
+  background: #fdfaf5;
+}
+
+.flow,
+.price {
+  background: #fff;
+}
+
+.contact {
+  background: #fdfaf5;
+}
+
+/* ===========================
+   代表の想い（Story）
+=========================== */
+.story {
+  padding: 96px 0;
+}
+
+.story-inner {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.story-photo {
+  position: sticky;
+  top: 88px;
+}
+
+.story-photo-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, #fde8d0 0%, #f5c9b0 55%, #e8a890 100%);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 12px 40px rgba(140, 80, 40, 0.16);
+  overflow: hidden;
+  position: relative;
+}
+
+.story-photo-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(150, 80, 30, 0.18));
+}
+
+.story-photo-emoji {
+  font-size: 72px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.story-photo-caption {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #6a3820;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.story-content {}
+
+.story-content .section-label {
+  text-align: left;
+}
+
+.story-heading {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 900;
+  color: #2d1a0e;
+  line-height: 1.55;
+  margin: 14px 0 36px;
+  word-break: keep-all;
+}
+
+.story-heading em {
+  font-style: normal;
+  color: #e8613a;
+}
+
+.story-paragraph {
+  font-size: 1.05rem;
+  color: #5a3e2b;
+  line-height: 2.1;
+  margin-bottom: 22px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.story-paragraph strong {
+  color: #2d1a0e;
+  font-weight: 700;
+}
+
+.story-signature {
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 2px solid #f0e0d0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.story-sig-avatar {
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #fde8d0, #f5c9b0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.story-sig-name {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #2d1a0e;
+}
+
+.story-sig-role {
+  font-size: 0.82rem;
+  color: #a07858;
+  margin-top: 4px;
+}
+
+/* ===========================
+   安心サポート v5（大型カード＋画像枠）
+=========================== */
+.support-v5 {
+  padding: 96px 0;
+}
+
+.support-intro {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.support-cards-v5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.support-card-v5 {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(140, 80, 40, 0.09);
+  border: 1.5px solid #f0e0d0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card-v5:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 52px rgba(140, 80, 40, 0.18);
+}
+
+/* 画像プレースホルダー（情景が浮かぶビジュアルエリア） */
+.support-card-img {
+  width: 100%;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* 各カードに異なる温かみのある色 */
+.support-card-v5:nth-child(1)  .support-card-img { background: linear-gradient(140deg, #fde8d0 0%, #f5c8a0 100%); }
+.support-card-v5:nth-child(2)  .support-card-img { background: linear-gradient(140deg, #fef3d0 0%, #fada90 100%); }
+.support-card-v5:nth-child(3)  .support-card-img { background: linear-gradient(140deg, #e8f5e0 0%, #c4e8a8 100%); }
+.support-card-v5:nth-child(4)  .support-card-img { background: linear-gradient(140deg, #e0f0fe 0%, #a8d8fc 100%); }
+.support-card-v5:nth-child(5)  .support-card-img { background: linear-gradient(140deg, #fde0c8 0%, #f8b890 100%); }
+.support-card-v5:nth-child(6)  .support-card-img { background: linear-gradient(140deg, #fde0e8 0%, #f8b0c8 100%); }
+.support-card-v5:nth-child(7)  .support-card-img { background: linear-gradient(140deg, #ece0fe 0%, #c8b0f8 100%); }
+.support-card-v5:nth-child(8)  .support-card-img { background: linear-gradient(140deg, #f5e8d0 0%, #e0c890 100%); }
+.support-card-v5:nth-child(9)  .support-card-img { background: linear-gradient(140deg, #fef5c0 0%, #fad870 100%); }
+.support-card-v5:nth-child(10) .support-card-img { background: linear-gradient(140deg, #e0f5e4 0%, #a8e8b8 100%); }
+.support-card-v5:nth-child(11) .support-card-img { background: linear-gradient(140deg, #fde8f0 0%, #f8b8d8 100%); }
+
+.support-img-scene-emoji {
+  font-size: 3.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+}
+
+.support-img-scene-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(60, 30, 10, 0.55);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* 写真準備中バッジ */
+.support-card-img::after {
+  content: '写真準備中';
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: rgba(100, 50, 20, 0.45);
+  background: rgba(255,255,255,0.55);
+  padding: 2px 8px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+}
+
+/* カード本文 */
+.support-card-body {
+  padding: 22px 22px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.support-card-num {
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #f0c0a0;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.support-card-title {
+  font-size: 1.2rem;   /* ≈ 19–21px */
+  font-weight: 900;
+  color: #2d1a0e;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  word-break: keep-all;
+}
+
+.support-card-desc {
+  font-size: 0.92rem;
+  color: #7a5a47;
+  line-height: 1.95;
+  flex: 1;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ===========================
+   対象エリア（コンパクト化）
+=========================== */
+.area-compact {
+  background: #fff8f4;
+  padding: 48px 0;
+  border-top: 1px solid #f5e0d0;
+}
+
+.area-compact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.area-compact-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.area-compact-text {}
+
+.area-compact-name {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #2d1a0e;
+}
+
+.area-compact-note {
+  font-size: 0.88rem;
+  color: #a07858;
+  margin-top: 4px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ===========================
+   FAQ + 料金をひとつのセクション帯に
+=========================== */
+.faq-price-block {
+  background: #fdfaf5;
+}
+
+/* ===========================
+   セクション区切り装飾
+=========================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f0d8c8, transparent);
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* ===========================
+   レスポンシブ
+=========================== */
+@media (max-width: 1024px) {
+  .support-cards-v5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: 64px 0;
+  }
+
+  .story-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-photo {
+    position: static;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .story-content .section-label {
+    text-align: center;
+  }
+
+  .story-heading {
+    text-align: center;
+  }
+
+  .story-signature {
+    justify-content: center;
+  }
+
+  .support-v5 {
+    padding: 64px 0;
+  }
+
+  .support-cards-v5 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .support-card-img {
+    height: 150px;
+  }
+
+  .support-img-scene-emoji {
+    font-size: 2.8rem;
+  }
+
+  .support-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story {
+    padding: 52px 0;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+
+  .support-v5 {
+    padding: 52px 0;
+  }
+
+  .support-card-body {
+    padding: 18px 18px 22px;
+  }
+
+  .support-card-title {
+    font-size: 1.1rem;
+  }
+
+  .support-card-desc {
+    font-size: 0.9rem;
+  }
+}
