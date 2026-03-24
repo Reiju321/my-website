@@ -55,7 +55,7 @@
   <div class="hero-inner">
     <p class="hero-sub">高齢者専門おしゃべりサービス</p>
     <h1 class="hero-title">
-      笑顔のある毎日を、<br />
+      笑顔のある毎日を、<br class="pc-only" />
       離れていても。
     </h1>
     <p class="hero-desc">
@@ -74,7 +74,7 @@
 <section class="problem">
   <div class="container">
     <p class="section-label">こんなお悩みはありませんか？</p>
-    <h2 class="section-title">離れて暮らす親の<br />「見えない不安」</h2>
+    <h2 class="section-title">離れて暮らす親の<br class="sp-only" />「見えない不安」</h2>
     <div class="problem-grid">
       <div class="problem-card">
         <span class="problem-icon">📞</span>
@@ -119,7 +119,7 @@
       <div class="story-content">
         <p class="section-label story-label">代表の想い</p>
         <h2 class="story-heading">
-          笑顔のある毎日を、<em>離れていても。</em>
+          笑顔のある毎日を、<br class="sp-only" /><em>離れていても。</em>
         </h2>
 
         <p class="story-paragraph">
@@ -150,7 +150,7 @@
   <div class="container">
     <div class="support-intro">
       <p class="section-label">あなたへえがお便</p>
-      <h2 class="section-title">11項目の安心サポート</h2>
+      <h2 class="section-title">11項目の<br class="sp-only" />安心サポート</h2>
       <p class="section-desc"><span style="display:inline-block;">ただのおしゃべりでは</span><span style="display:inline-block;">ありません。</span><span style="display:inline-block;">会話の中に、</span><span style="display:inline-block;">ご家族を安心させる</span><span style="display:inline-block;">仕組みが</span><span style="display:inline-block;">詰まっています。</span></p>
     </div>
 
@@ -309,7 +309,7 @@
 <section class="flow" id="flow">
   <div class="container">
     <p class="section-label">ご利用の流れ</p>
-    <h2 class="section-title">お申し込みから<br />サービス開始まで</h2>
+    <h2 class="section-title">お申し込みから<br class="sp-only" />サービス開始まで</h2>
     <p class="section-desc">初めての方も安心。丁寧にご案内します。</p>
     <div class="flow-steps">
 
@@ -405,7 +405,7 @@
   <section class="price" id="price">
     <div class="container">
       <p class="section-label">料金プラン</p>
-      <h2 class="section-title">あなたへえがお便<br />料金プラン</h2>
+      <h2 class="section-title">あなたへえがお便<br class="sp-only" />料金プラン</h2>
 
       <div class="price-tables">
 
@@ -475,7 +475,7 @@
 <section class="contact" id="contact">
   <div class="container">
     <p class="section-label">お問い合わせ</p>
-    <h2 class="section-title">まずはお気軽に<br />ご相談ください</h2>
+    <h2 class="section-title">まずはお気軽に<br class="sp-only" />ご相談ください</h2>
     <p class="section-desc">無料相談を承っております。お電話・LINE・フォームからどうぞ。</p>
 
     <div class="contact-options">
@@ -561,13 +561,31 @@
     hamburger.classList.remove('active');
   }
 
-  // スクロール時にヘッダーの影を強化
+  // スティッキーヘッダー：スクロール中のみ表示、停止1.5秒後に非表示
   const header = document.querySelector('.header');
+  let hideTimer = null;
+
+  function showHeader() {
+    header.classList.remove('header-hidden');
+  }
+  function scheduleHide() {
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-hidden');
+      }
+    }, 1500);
+  }
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
       header.classList.add('scrolled');
+      showHeader();
+      scheduleHide();
     } else {
-      header.classList.remove('scrolled');
+      // ページ最上部に戻ったら常に表示
+      header.classList.remove('scrolled', 'header-hidden');
+      if (hideTimer) clearTimeout(hideTimer);
     }
   }, { passive: true });
 

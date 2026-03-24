@@ -60,11 +60,27 @@ img {
   z-index: 1000;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: box-shadow 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.35s ease, box-shadow 0.3s ease;
+}
+
+.header.header-hidden {
+  opacity: 0;
+  transform: translateY(-14px);
+  pointer-events: none;
 }
 
 .header.scrolled {
   box-shadow: 0 4px 24px rgba(0,0,0,0.14);
+}
+
+/* PC/スマホ限定改行 */
+.pc-only { display: inline; }
+.sp-only { display: none; }
+@media (max-width: 768px) {
+  .pc-only { display: none; }
+  .sp-only { display: inline; }
 }
 
 .header-inner {
