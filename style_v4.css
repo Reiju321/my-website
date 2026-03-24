@@ -1,0 +1,205 @@
+/* =============================================
+   style_v4.css — 安心サポート カードグリッド
+============================================= */
+
+/* ===========================
+   features セクション上書き
+=========================== */
+.features {
+  background: #fafaf8;
+  padding: 96px 0;
+}
+
+/* 旧リスト形式を非表示 → 新カードで置き換え */
+.features-grid {
+  display: none;
+}
+
+/* ===========================
+   カードグリッド
+=========================== */
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 20px 28px;
+  box-shadow: 0 4px 18px rgba(140, 80, 40, 0.08);
+  border: 1.5px solid #f5e0d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f5c9b0, #e8613a);
+  border-radius: 20px 20px 0 0;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(140, 80, 40, 0.16);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* アイコン背景サークル */
+.feature-card-icon {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #fde8d0 0%, #f5c9b0 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  transition: transform 0.28s ease, background 0.28s ease;
+}
+
+.feature-card:hover .feature-card-icon {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #f5c9b0 0%, #e8a080 100%);
+}
+
+.feature-card-icon i {
+  font-size: 1.75rem;
+  color: #e8613a;
+  transition: color 0.28s ease;
+}
+
+.feature-card:hover .feature-card-icon i {
+  color: #c94f2c;
+}
+
+/* 番号バッジ */
+.feature-card-num {
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: #f0c0a0;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* タイトル */
+.feature-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2d1a0e;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+/* 説明文 */
+.feature-card-desc {
+  font-size: 0.8rem;
+  color: #7a5a47;
+  line-height: 1.85;
+  flex: 1;
+}
+
+/* ===========================
+   レスポンシブ
+=========================== */
+@media (max-width: 1024px) {
+  .feature-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 72px 0;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  .feature-card {
+    padding: 24px 16px 22px;
+  }
+
+  .feature-card-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+  }
+
+  .feature-card-icon i {
+    font-size: 1.5rem;
+  }
+
+  .feature-card-title {
+    font-size: 0.88rem;
+  }
+
+  .feature-card-desc {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 56px 0;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .feature-card {
+    padding: 20px 14px 18px;
+    border-radius: 16px;
+  }
+
+  .feature-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  .feature-card-icon i {
+    font-size: 1.35rem;
+  }
+
+  .feature-card-num {
+    font-size: 0.62rem;
+  }
+
+  .feature-card-title {
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+  }
+
+  .feature-card-desc {
+    font-size: 0.75rem;
+    line-height: 1.75;
+  }
+}
