@@ -81,7 +81,13 @@
   line-height: 1.4;
 }
 
-.story-content {}
+.story-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 .story-content .section-label {
   text-align: left;
