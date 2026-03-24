@@ -6,21 +6,23 @@
    テキスト改行制御
 =========================== */
 
-/* 段落・リスト・テーブルセル:
-   word-break: keep-all  → 日本語の自然な分節を尊重（句読点で折返）
-   overflow-wrap: anywhere → 容器からはみ出す場合のみ任意の位置で強制折返し */
+/* 段落・リスト・テーブルセル */
 p,
 li,
 td,
 th {
-  word-break: keep-all;
-  overflow-wrap: anywhere;
+  word-break: normal;       /* 語の途中で折り返さない */
+  overflow-wrap: anywhere;  /* 容器からはみ出す場合のみ強制折返し */
+  line-break: strict;       /* 禁則処理（句読点・閉じ括弧を行頭に出さない） */
+  line-height: 2.0;
+  text-align: justify;      /* 両端揃えで余白を均等分散 */
 }
 
-/* 見出しも語の途中で折り返させない */
+/* 見出しの禁則処理 */
 h1, h2, h3, h4 {
   word-break: keep-all;
   overflow-wrap: break-word;
+  line-break: strict;
 }
 
 /* 意味のまとまりを一行に保つユーティリティ

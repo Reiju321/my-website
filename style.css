@@ -22,12 +22,15 @@ html {
 body {
   font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.9;
   color: #3d2b1f;
   background: #fff;
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 a {
@@ -69,6 +72,7 @@ img {
 .logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logo-img {
@@ -93,9 +97,11 @@ img {
 
 .nav {
   display: flex;
-  gap: 28px;
-  font-size: 0.9rem;
+  gap: 20px;
+  font-size: 0.85rem;
   font-weight: 500;
+  flex-shrink: 1;
+  white-space: nowrap;
 }
 
 .nav a:hover {
@@ -110,6 +116,7 @@ img {
   font-size: 0.85rem;
   font-weight: 700;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: background 0.2s;
 }
 
