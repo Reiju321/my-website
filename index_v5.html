@@ -560,6 +560,16 @@
     hamburger.classList.remove('active');
   }
 
+  // スクロール時にヘッダーの影を強化
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
   // ヒーロー背景スライドショー（ふわっとフェード）
   const slides = document.querySelectorAll('.hero-slide');
   let current = 0;

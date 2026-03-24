@@ -52,11 +52,19 @@ img {
    ヘッダー
 =========================== */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.14);
 }
 
 .header-inner {
@@ -172,7 +180,7 @@ img {
 =========================== */
 .hero {
   position: relative;
-  padding: 80px 0 0;
+  padding: 164px 0 0; /* 80px コンテンツ余白 + 84px ヘッダー高さ */
   overflow: hidden;
 }
 
@@ -992,7 +1000,7 @@ img {
   .header-cta { display: none; }
   .hamburger { display: flex; }
 
-  .hero { padding: 60px 0 0; }
+  .hero { padding: 142px 0 0; } /* 60px + 82px ヘッダー高さ */
   .hero-inner { padding-bottom: 60px; }
   .sp-br { display: inline; }
   .pc-br { display: none; }
