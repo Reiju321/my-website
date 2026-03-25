@@ -1,0 +1,216 @@
+/* =============================================
+   style_v6.css — ヒーロー 高級和モダンデザイン
+   参考：炎匠スタイル（暗背景・明朝体・ゴールド）
+============================================= */
+
+/* ===========================
+   ヒーロー 背景・オーバーレイ
+=========================== */
+
+/* スライドショー画像を暗く（和モダンな重厚感） */
+.hero-slide {
+  filter: brightness(0.55) saturate(0.85);
+}
+
+/* 深い焦げ茶〜黒のグラデーションオーバーレイ */
+.hero-overlay {
+  background: linear-gradient(
+    160deg,
+    rgba(6, 3, 0, 0.72) 0%,
+    rgba(18, 8, 0, 0.58) 45%,
+    rgba(10, 5, 0, 0.75) 100%
+  );
+}
+
+/* ===========================
+   ヒーロー テキストエリア
+=========================== */
+.hero-inner {
+  max-width: 820px;
+  padding-bottom: 140px;
+}
+
+/* サブラベル（炎匠の "BLACK WAGYU YAKINIKU" スタイル） */
+.hero-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: transparent;
+  color: #c9a96e;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.hero-sub::before,
+.hero-sub::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: #c9a96e;
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   メインタイトル：明朝体・クリーム
+=========================== */
+.hero-title {
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'ヒラギノ明朝 ProN', 'HiraMinProN-W6', serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 700;
+  color: #f5e8cc;
+  line-height: 1.45;
+  margin-bottom: 0;
+  letter-spacing: 0.06em;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.7),
+    0 0 60px rgba(180, 140, 60, 0.18);
+}
+
+/* タイトル下の金線区切り */
+.hero-divider {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+  margin: 28px auto 28px;
+}
+
+/* ===========================
+   説明文
+=========================== */
+.hero-desc {
+  color: rgba(255, 248, 240, 0.86);
+  font-size: 1.05rem;
+  line-height: 2.1;
+  margin-bottom: 48px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* ===========================
+   CTAボタン（炎匠スタイル）
+=========================== */
+.hero .btn-primary {
+  background: #e8613a;
+  color: #fff;
+  border: 2px solid #e8613a;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 17px 48px;
+  min-height: 58px;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 24px rgba(232, 97, 58, 0.5);
+  border-radius: 50px;
+}
+
+.hero .btn-primary:hover {
+  background: #c94f2c;
+  border-color: #c94f2c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(232, 97, 58, 0.6);
+}
+
+/* ゴールドアウトラインボタン */
+.hero .btn-secondary {
+  background: transparent;
+  color: #c9a96e;
+  border: 1.5px solid #c9a96e;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 17px 48px;
+  min-height: 58px;
+  letter-spacing: 0.08em;
+  box-shadow: none;
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(201, 169, 110, 0.12);
+  color: #e0c484;
+  border-color: #e0c484;
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   スクロールインジケーター
+=========================== */
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(201, 169, 110, 0.7);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.hero-scroll-bar {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, #c9a96e, transparent);
+  animation: hero-scroll-anim 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes hero-scroll-anim {
+  0%   { transform: scaleY(0); opacity: 1; }
+  60%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+
+/* ===========================
+   レスポンシブ
+=========================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-sub {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-sub::before,
+  .hero-sub::after {
+    width: 20px;
+    margin: 0 10px;
+  }
+
+  .hero-desc {
+    font-size: 0.97rem;
+  }
+
+  .hero .btn-primary,
+  .hero .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px 28px;
+    font-size: 1rem;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.9rem, 10vw, 2.6rem);
+  }
+}
