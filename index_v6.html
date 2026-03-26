@@ -586,6 +586,33 @@
     });
   });
 
+  // Intersection Observer フェードイン
+  const fadeTargets = document.querySelectorAll(
+    '.section-title, .section-label, .section-desc, ' +
+    '.problem-card, ' +
+    '.story-photo, .story-heading, .story-paragraph, .story-signature, ' +
+    '.support-card-v5, ' +
+    '.feature-card, ' +
+    '.flow-step, .flow-arrow, ' +
+    '.faq-item, ' +
+    '.price-card, .price-note, ' +
+    '.area-compact-inner, ' +
+    '.contact-card'
+  );
+
+  fadeTargets.forEach(el => el.classList.add('fade-in'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeTargets.forEach(el => observer.observe(el));
+
   // スクロールインジケーター：120px 以上で非表示
   const scrollIndicator = document.getElementById('scrollIndicator');
   window.addEventListener('scroll', () => {

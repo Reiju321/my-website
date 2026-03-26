@@ -38,6 +38,46 @@
 }
 
 /* ===========================
+   フェードインアニメーション
+=========================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* カードは順番にずらして表示 */
+.support-card-v5:nth-child(2) { transition-delay: 0.1s; }
+.support-card-v5:nth-child(3) { transition-delay: 0.2s; }
+.support-card-v5:nth-child(4) { transition-delay: 0.1s; }
+.support-card-v5:nth-child(5) { transition-delay: 0.2s; }
+.support-card-v5:nth-child(6) { transition-delay: 0.3s; }
+
+.feature-card:nth-child(2) { transition-delay: 0.1s; }
+.feature-card:nth-child(3) { transition-delay: 0.2s; }
+.feature-card:nth-child(4) { transition-delay: 0.3s; }
+
+.problem-card:nth-child(2) { transition-delay: 0.08s; }
+.problem-card:nth-child(3) { transition-delay: 0.16s; }
+.problem-card:nth-child(4) { transition-delay: 0.08s; }
+.problem-card:nth-child(5) { transition-delay: 0.16s; }
+.problem-card:nth-child(6) { transition-delay: 0.24s; }
+
+/* モーション低減設定を尊重 */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===========================
    スクロールインジケーター（右下固定）
 =========================== */
 .scroll-indicator {
