@@ -24,12 +24,12 @@ h2, h3 {
 }
 
 /* ===========================
-   お悩み 6枚カードグリッド
+   お悩み 6枚カードグリッド（2列・縦型）
 =========================== */
 .onayami-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
   margin-top: 48px;
 }
 
@@ -37,14 +37,13 @@ h2, h3 {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  border: 2px solid #f0e0d0;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .onayami-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(232, 97, 58, 0.14);
-  border-color: #e8613a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
 .onayami-img {
@@ -53,19 +52,16 @@ h2, h3 {
   object-fit: cover;
   object-position: center top;
   display: block;
+  border-radius: 16px 16px 0 0;
 }
 
 .onayami-body {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 18px;
-}
-
-@media (max-width: 900px) {
-  .onayami-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  padding: 16px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
 }
 
 @media (max-width: 600px) {
@@ -73,10 +69,6 @@ h2, h3 {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 32px;
-  }
-
-  .onayami-img {
-    height: 200px;
   }
 }
 
