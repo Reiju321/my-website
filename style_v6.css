@@ -3,6 +3,42 @@
 ============================================= */
 
 /* ===========================
+   グローバルタイポグラフィ
+=========================== */
+
+/* 本文：ゴシック体・読みやすさ優先 */
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+
+p, li, a, td, th, span, label, input, textarea, button {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+
+/* 見出し：明朝体・高級感 */
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  letter-spacing: 0.06em;
+  color: #222222;
+}
+
+/* PC：少し大きく */
+@media (min-width: 769px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+/* ===========================
    ヒーロー 背景画像
 =========================== */
 
