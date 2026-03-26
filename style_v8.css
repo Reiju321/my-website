@@ -1,0 +1,408 @@
+/* =============================================
+   style_v8.css — LP全面刷新（ヒーローテキスト・3つの理由・お客様の声）
+============================================= */
+
+/* ===========================
+   ヒーロー テキストオーバーレイ
+=========================== */
+.hero-text-v8 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 700px;
+  pointer-events: none;
+}
+
+.hero-label-v8 {
+  display: inline-block;
+  background: rgba(232, 97, 58, 0.85);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 5px 18px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.hero-title-v8 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.hero-sub-v8 {
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.8;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  margin-bottom: 32px;
+}
+
+.hero-cta-v8 {
+  pointer-events: auto;
+  display: inline-block;
+  background: #e8613a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  box-shadow: 0 6px 24px rgba(232, 97, 58, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.hero-cta-v8:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(232, 97, 58, 0.65);
+}
+
+@media (max-width: 768px) {
+  .hero-text-v8 {
+    transform: translate(-50%, -58%);
+    width: 88%;
+  }
+
+  .hero-label-v8 {
+    font-size: 0.72rem;
+    padding: 4px 14px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title-v8 {
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+
+  .hero-sub-v8 {
+    font-size: 0.82rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-v8 {
+    font-size: 0.9rem;
+    padding: 12px 30px;
+  }
+}
+
+/* ===========================
+   選ばれる3つの理由
+=========================== */
+.reasons-v8 {
+  background: #fdf6f2;
+  padding: 96px 0;
+}
+
+.reasons-grid-v8 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.reason-card-v8 {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #e8613a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-card-v8:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(232, 97, 58, 0.14);
+}
+
+.reason-num-v8 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e8613a;
+  opacity: 0.35;
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.reason-title-v8 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a0a00;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.reason-desc-v8 {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+  .reasons-v8 {
+    padding: 72px 0;
+  }
+
+  .reasons-grid-v8 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 36px;
+  }
+
+  .reason-card-v8 {
+    padding: 28px 22px 24px;
+  }
+}
+
+/* ===========================
+   お客様の声
+=========================== */
+.voices-v8 {
+  background: linear-gradient(160deg, #fff8f5 0%, #fff3ee 100%);
+  padding: 96px 0;
+}
+
+.voices-grid-v8 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.voice-card-v8 {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voice-card-v8:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.10);
+}
+
+.voice-quote-v8 {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  color: #e8613a;
+  opacity: 0.2;
+  line-height: 1;
+  height: 36px;
+  margin-bottom: 12px;
+}
+
+.voice-text-v8 {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.9;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.voice-author-v8 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #f0e8e0;
+}
+
+.voice-avatar-v8 {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #f5e0d0 0%, #fce8d8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.voice-name-v8 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.voice-role-v8 {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .voices-v8 {
+    padding: 72px 0;
+  }
+
+  .voices-grid-v8 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 36px;
+  }
+
+  .voice-card-v8 {
+    padding: 28px 22px 24px;
+  }
+}
+
+/* ===========================
+   catchcopy セクション強化
+=========================== */
+.catchcopy-heading {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.catchcopy-desc {
+  font-size: 1rem;
+  line-height: 2;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   FAQアコーディオン強化
+=========================== */
+.faq-item {
+  border: none;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+}
+
+.faq-item summary.faq-q {
+  padding: 20px 52px 20px 24px;
+  font-weight: 700;
+  font-size: 0.97rem;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  color: #1a0a00;
+}
+
+.faq-item summary.faq-q::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 52px;
+  background: #e8613a;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-item summary.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: #e8613a;
+  font-weight: 300;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary.faq-q::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item summary.faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-a {
+  padding: 0 24px 20px 52px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.9;
+}
+
+/* ===========================
+   セクションタイトル下線アクセント
+=========================== */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+/* ===========================
+   お問い合わせフォーム強化
+=========================== */
+.contact-form {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.07);
+}
+
+.form-row label {
+  font-weight: 700;
+  color: #333;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  border: 2px solid #e8d5c8;
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #e8613a;
+  box-shadow: 0 0 0 3px rgba(232, 97, 58, 0.12);
+  outline: none;
+}
+
+/* ===========================
+   フッター強化
+=========================== */
+.footer {
+  background: #1a0a00;
+}
+
+.footer-tagline,
+.footer-copy {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a:hover {
+  color: #e8613a;
+}
