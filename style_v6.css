@@ -53,6 +53,65 @@
 }
 
 /* ===========================
+   最後の一押し CTA
+=========================== */
+.final-cta {
+  background: linear-gradient(135deg, #e8613a 0%, #f07040 60%, #f59060 100%);
+  padding: 96px 0;
+  text-align: center;
+}
+
+.final-cta-sub {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.final-cta-heading {
+  color: #fff;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.final-cta-btn {
+  background: #fff;
+  color: #e8613a;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: 900;
+  padding: 20px 56px;
+  min-height: 64px;
+  border-radius: 50px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.final-cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  color: #c94f2c;
+}
+
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 72px 0;
+  }
+
+  .final-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.05rem;
+  }
+}
+
+/* ===========================
    ウェーブディバイダー
 =========================== */
 
