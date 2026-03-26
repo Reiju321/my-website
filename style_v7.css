@@ -1,0 +1,142 @@
+/* =============================================
+   style_v7.css — LP最適化（チェックリスト・カード・アニメーション）
+============================================= */
+
+/* ===========================
+   タイポグラフィ上書き
+=========================== */
+body {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #333333;
+}
+
+p, li, span, a, td, th, label {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #333333;
+}
+
+h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  color: #222222;
+}
+
+/* ===========================
+   お悩みチェックリスト
+=========================== */
+.worry-list {
+  list-style: none;
+  padding: 0;
+  margin: 48px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 720px;
+}
+
+.worry-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 2px solid #f0e0d0;
+  border-radius: 14px;
+  padding: 18px 20px;
+  cursor: default;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.worry-item:hover {
+  border-color: #e8613a;
+  box-shadow: 0 4px 20px rgba(232, 97, 58, 0.12);
+  transform: translateY(-3px);
+}
+
+.worry-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: #e8613a;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.worry-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d1a0e;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 600px) {
+  .worry-list {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .worry-item {
+    padding: 16px 18px;
+  }
+}
+
+/* ===========================
+   安心サポート カード（3列・ホバー上品）
+=========================== */
+.support-cards-v5 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.support-card-v5 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card-v5:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+@media (max-width: 768px) {
+  .support-cards-v5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   フェードインアニメーション（20px・0.8s）
+=========================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* チェックリストのスタッガー */
+.worry-item:nth-child(2) { transition-delay: 0.08s; }
+.worry-item:nth-child(3) { transition-delay: 0.06s; }
+.worry-item:nth-child(4) { transition-delay: 0.14s; }
+.worry-item:nth-child(5) { transition-delay: 0.12s; }
+.worry-item:nth-child(6) { transition-delay: 0.20s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

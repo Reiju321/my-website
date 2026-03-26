@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>あなたへえがお｜高齢者おしゃべりサービス</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_v2.css" />
+  <link rel="stylesheet" href="style_v4.css" />
+  <link rel="stylesheet" href="style_v5.css" />
+  <link rel="stylesheet" href="style_v6.css" />
+  <link rel="stylesheet" href="style_v7.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="あなたへえがお" class="logo-img" />
+    </div>
+    <nav class="nav">
+      <a href="#story">代表の想い</a>
+      <a href="#support">安心サポート</a>
+      <a href="#price">料金</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="sp-nav" id="spNav">
+    <a href="#story" onclick="closeMenu()">代表の想い</a>
+    <a href="#support" onclick="closeMenu()">安心サポート</a>
+    <a href="#price" onclick="closeMenu()">料金</a>
+    <a href="#flow" onclick="closeMenu()">ご利用の流れ</a>
+    <a href="#contact" onclick="closeMenu()">お問い合わせ</a>
+    <a href="#contact" class="sp-nav-cta" onclick="closeMenu()">📞 無料相談はこちら</a>
+  </nav>
+</header>
+
+<!-- ① ヒーロー -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-white-overlay" id="heroWhiteOverlay"></div>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="scroll-indicator-text">SCROLL</span>
+    <div class="scroll-indicator-line">
+      <div class="scroll-indicator-bar"></div>
+    </div>
+    <span class="scroll-indicator-arrow">&#9660;</span>
+  </div>
+</section>
+
+<!-- キャッチコピー -->
+<section class="catchcopy">
+  <div class="container">
+    <p class="catchcopy-label">高齢者専門おしゃべりサービス</p>
+    <h2 class="catchcopy-heading">
+      笑顔のある毎日を<br />
+      離れていても。
+    </h2>
+    <p class="catchcopy-desc">
+      離れて暮らすご両親、元気にお過ごしですか？<br />
+      私たちがおしゃべり相手になり、日々の変化をレポート。<br />
+      遠くで見守るご家族へ「安心」をお届けします。
+    </p>
+  </div>
+</section>
+
+<!-- ② お悩み -->
+<section class="problem">
+  <div class="container">
+    <p class="section-label">こんなお悩みはありませんか？</p>
+    <h2 class="section-title">離れて暮らす親の<br class="sp-only" />「見えない不安」</h2>
+    <ul class="worry-list">
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">電話しても「大丈夫」としか言わない</span>
+      </li>
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">薬をちゃんと飲んでいるか分からない</span>
+      </li>
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">認知症が始まっていないか心配</span>
+      </li>
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">転倒・骨折が怖い</span>
+      </li>
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">詐欺・悪徳商法に引っかからないか</span>
+      </li>
+      <li class="worry-item">
+        <span class="worry-check">✓</span>
+        <span class="worry-text">一人でいて寂しくしていないか</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ③ 代表の想い（Story） -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-inner">
+
+      <!-- 代表者写真：準備中のため一時非表示 -->
+      <div class="story-photo" style="display:none;">
+        <div class="story-photo-frame">
+          <span class="story-photo-emoji">👩</span>
+          <p class="story-photo-caption">代表者写真<br />（準備中）</p>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <p class="section-label story-label">代表の想い</p>
+        <h2 class="story-heading">
+          笑顔のある毎日を<br class="sp-only" /><em>離れていても。</em>
+        </h2>
+
+        <p class="story-paragraph">
+          <span style="display:inline-block;">私たちが大切にしているのは、</span><span style="display:inline-block;">ただの「見守り」では</span><span style="display:inline-block;">ありません。</span><span style="display:inline-block;">おしゃべりを通して、</span><span style="display:inline-block;">孤独感を解消し、</span><span style="display:inline-block;">心からの「笑顔」を</span><span style="display:inline-block;">引き出すことです。</span>
+        </p>
+        <p class="story-paragraph">
+          <span style="display:inline-block;">離れて暮らす</span><span style="display:inline-block;">ご家族様の「安心」と、</span><span style="display:inline-block;">高齢者様の</span><span style="display:inline-block;">「自分らしい生活」の</span><span style="display:inline-block;">両立を目指し、</span><span style="display:inline-block;">お一人おひとりに</span><span style="display:inline-block;">寄り添った</span><span style="display:inline-block;">温かいサポートを</span><span style="display:inline-block;">お届けします。</span>
+        </p>
+        <p class="story-paragraph">
+          <span style="display:inline-block;">地域に根差した</span><span style="display:inline-block;">サービスとして、</span><span style="display:inline-block;">皆様の</span><strong><span style="display:inline-block;">「心の架け橋」</span></strong><span style="display:inline-block;">となれるよう、</span><span style="display:inline-block;">誠心誠意</span><span style="display:inline-block;">努めてまいります。</span>
+        </p>
+
+        <div class="story-signature">
+          <div class="story-sig-avatar">👩</div>
+          <div>
+            <p class="story-sig-name">代表　○○ ○子</p>
+            <p class="story-sig-role">あなたへえがお 代表 ／ シニア傾聴師</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ④ 11安心サポート（画像枠カードグリッド） -->
+<section class="support-v5" id="support">
+  <div class="container">
+    <div class="support-intro">
+      <p class="section-label">あなたへえがお便</p>
+      <h2 class="section-title">11項目の<br class="sp-only" />安心サポート</h2>
+      <p class="section-desc"><span style="display:inline-block;">ただのおしゃべりでは</span><span style="display:inline-block;">ありません。</span><span style="display:inline-block;">会話の中に、</span><span style="display:inline-block;">ご家族を安心させる</span><span style="display:inline-block;">仕組みが</span><span style="display:inline-block;">詰まっています。</span></p>
+    </div>
+
+    <div class="support-cards-v5">
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">📋</span>
+          <p class="support-img-scene-label">スタッフが毎回チェック</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">01</p>
+          <h3 class="support-card-title">家族への「見守りレポート」</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">顔色・認知症のサイン・</span><span style="display:inline-block;">冷蔵庫の中などを</span><span style="display:inline-block;">チェックし、</span><span style="display:inline-block;">毎回詳細なレポートを</span><span style="display:inline-block;">離れて暮らす</span><span style="display:inline-block;">ご家族へ</span><span style="display:inline-block;">お届けします。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🔔</span>
+          <p class="support-img-scene-label">リアルタイム報告</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">02</p>
+          <h3 class="support-card-title">家族への「行動レポート」</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">「今から行きます」</span><span style="display:inline-block;">「着きました」</span><span style="display:inline-block;">「終わりました」と</span><span style="display:inline-block;">リアルタイムに報告。</span><span style="display:inline-block;">会話場面の録画も</span><span style="display:inline-block;">お送りします。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">💊</span>
+          <p class="support-img-scene-label">薬の飲み忘れを防ぐ</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">03</p>
+          <h3 class="support-card-title">お薬カレンダーのチェック</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">今日の薬が</span><span style="display:inline-block;">飲まれているかを</span><span style="display:inline-block;">カレンダーで確認し、</span><span style="display:inline-block;">ご家族へ報告。</span><span style="display:inline-block;">薬の飲み忘れという</span><span style="display:inline-block;">大きな悩みを</span><span style="display:inline-block;">解決します。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">📱</span>
+          <p class="support-img-scene-label">孫とビデオ通話できた！</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">04</p>
+          <h3 class="support-card-title">スマホレッスン</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">会話の中で</span><span style="display:inline-block;">スマホの使い方を</span><span style="display:inline-block;">レッスン。</span><span style="display:inline-block;">目標は</span><span style="display:inline-block;">「子供・孫と</span><span style="display:inline-block;">LINEテレビ電話が</span><span style="display:inline-block;">できるようになること」</span><span style="display:inline-block;">です。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🛍️</span>
+          <p class="support-img-scene-label">重いものはお任せ</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">05</p>
+          <h3 class="support-card-title">おつかい代行</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">お水やお米など</span><span style="display:inline-block;">重いものを</span><span style="display:inline-block;">スタッフが</span><span style="display:inline-block;">訪問の途中に</span><span style="display:inline-block;">購入して</span><span style="display:inline-block;">お届けします</span><span style="display:inline-block;">（商品代は実費）。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">📖</span>
+          <p class="support-img-scene-label">懐かしい思い出を記録</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">06</p>
+          <h3 class="support-card-title">昔の思い出レポート</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">会話で出た</span><span style="display:inline-block;">「若い頃の楽しかった話」</span><span style="display:inline-block;">「子育ての思い出」を</span><span style="display:inline-block;">記録し、</span><span style="display:inline-block;">月1回</span><span style="display:inline-block;">ご家族へお届けします。</span><span style="display:inline-block;">エンディングノートの</span><span style="display:inline-block;">代わりにもなります。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🛡️</span>
+          <p class="support-img-scene-label">詐欺から守る</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">07</p>
+          <h3 class="support-card-title">詐欺・悪徳商法の防犯チェック</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">「最近変な電話は</span><span style="display:inline-block;">ありましたか？」などの</span><span style="display:inline-block;">会話から</span><span style="display:inline-block;">不審な郵便物・</span><span style="display:inline-block;">請求書をチェック。</span><span style="display:inline-block;">不審な点があれば</span><span style="display:inline-block;">即座にご家族へ</span><span style="display:inline-block;">アラートを出します。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🚶</span>
+          <p class="support-img-scene-label">転倒・骨折を未然に防ぐ</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">08</p>
+          <h3 class="support-card-title">転倒防止の導線チェック</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">足元の延長コードや</span><span style="display:inline-block;">滑りやすいマットなど、</span><span style="display:inline-block;">転倒・骨折の</span><span style="display:inline-block;">原因になるものを</span><span style="display:inline-block;">確認し、</span><span style="display:inline-block;">安全な場所へ</span><span style="display:inline-block;">移動します。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🔦</span>
+          <p class="support-img-scene-label">いざという時も安心</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">09</p>
+          <h3 class="support-card-title">防災グッズ・備蓄チェック</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">月1回、</span><span style="display:inline-block;">非常食・水の賞味期限や</span><span style="display:inline-block;">懐中電灯の電池を確認。</span><span style="display:inline-block;">「いざという時も</span><span style="display:inline-block;">大丈夫」という</span><span style="display:inline-block;">安心を</span><span style="display:inline-block;">ご家族へ</span><span style="display:inline-block;">お届けします。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🥗</span>
+          <p class="support-img-scene-label">食事内容を把握</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">10</p>
+          <h3 class="support-card-title">栄養の偏りレポート</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">「この1週間、</span><span style="display:inline-block;">何を食べましたか？」という</span><span style="display:inline-block;">会話から</span><span style="display:inline-block;">食事内容を把握し、</span><span style="display:inline-block;">栄養の偏りを</span><span style="display:inline-block;">ご家族へ報告。</span><span style="display:inline-block;">親の健康寿命を</span><span style="display:inline-block;">延ばします。</span></p>
+        </div>
+      </div>
+
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <span class="support-img-scene-emoji">🖼️</span>
+          <p class="support-img-scene-label">アルバムを一緒に整理</p>
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">11</p>
+          <h3 class="support-card-title">写真整理・生前整理サポート</h3>
+          <p class="support-card-desc"><span style="display:inline-block;">昔のアルバムを</span><span style="display:inline-block;">一緒に見ながら</span><span style="display:inline-block;">おしゃべり。</span><span style="display:inline-block;">写真のデータ化や</span><span style="display:inline-block;">整理も少しずつ</span><span style="display:inline-block;">進めます。</span><span style="display:inline-block;">子供世代が悩む</span><span style="display:inline-block;">「実家の片付け」を</span><span style="display:inline-block;">自然に解決します。</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 対象エリア（コンパクト） -->
+<div class="area-compact">
+  <div class="container">
+    <div class="area-compact-inner">
+      <span class="area-compact-icon">📍</span>
+      <div class="area-compact-text">
+        <p class="area-compact-name">現在のサービスエリア<br>兵庫県 宝塚市内 全域</p>
+        <p class="area-compact-note">※宝塚市外の近隣エリアへの拡大も順次検討中です。<br>現時点では市内のみの訪問対応となりますのでご了承ください。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑤ ご利用の流れ -->
+<section class="flow" id="flow">
+  <div class="container">
+    <p class="section-label">ご利用の流れ</p>
+    <h2 class="section-title">お申し込みから<br class="sp-only" />サービス開始まで</h2>
+    <p class="section-desc">初めての方も安心。丁寧にご案内します。</p>
+    <div class="flow-steps">
+
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-icon">📞</div>
+        <h4>お問い合わせ</h4>
+        <p><span style="display:inline-block;">お電話・LINE・フォームから</span><span style="display:inline-block;">お気軽にご連絡ください。</span><span style="display:inline-block;">サービス内容や</span><span style="display:inline-block;">不明な点を</span><span style="display:inline-block;">ご説明します。</span></p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-icon">📋</div>
+        <h4>情報のご登録</h4>
+        <p><span style="display:inline-block;">お名前・電話番号・</span><span style="display:inline-block;">メールアドレスなど、</span><span style="display:inline-block;">基本情報を</span><span style="display:inline-block;">ご登録いただきます。</span></p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-icon">💬</div>
+        <h4>打ち合わせ・<br />プラン確定</h4>
+        <p><span style="display:inline-block;">ご希望の頻度や</span><span style="display:inline-block;">内容をお伺いし、</span><span style="display:inline-block;">ぴったりのプランを</span><span style="display:inline-block;">ご提案します。</span></p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-icon">💳</div>
+        <h4>料金のお支払い</h4>
+        <p><span style="display:inline-block;">銀行振込にて</span><span style="display:inline-block;">前払いをお願いしております。</span><span style="display:inline-block;">入金確認後に</span><span style="display:inline-block;">正式なご予約確定と</span><span style="display:inline-block;">なります。</span></p>
+      </div>
+
+      <div class="flow-arrow">▼</div>
+
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <div class="flow-icon">😊</div>
+        <h4>サービス開始</h4>
+        <p><span style="display:inline-block;">お約束の日時に</span><span style="display:inline-block;">スタッフが訪問。</span><span style="display:inline-block;">心を込めて</span><span style="display:inline-block;">おしゃべりや</span><span style="display:inline-block;">サポートをいたします。</span></p>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="#contact" class="btn-primary cta-btn">まずは無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ FAQ + 料金 -->
+<div class="faq-price-block">
+
+  <!-- よくあるご質問 -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="section-label">よくあるご質問</p>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">どんなスタッフが来ますか？</summary>
+          <p class="faq-a"><span style="display:inline-block;">当社の研修を受けた、</span><span style="display:inline-block;">傾聴スキルを持つ</span><span style="display:inline-block;">スタッフが伺います。</span><span style="display:inline-block;">プライバシーを厳守し、</span><span style="display:inline-block;">安心してお話しいただけるよう</span><span style="display:inline-block;">誠実に対応いたします。</span></p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">おしゃべりが苦手でも大丈夫ですか？</summary>
+          <p class="faq-a"><span style="display:inline-block;">もちろん大丈夫です。</span><span style="display:inline-block;">スタッフがお客様の</span><span style="display:inline-block;">ペースに合わせて</span><span style="display:inline-block;">お話を引き出しますので、</span><span style="display:inline-block;">無理に話す</span><span style="display:inline-block;">必要はありません。</span><span style="display:inline-block;">ふと思い出したことなど、</span><span style="display:inline-block;">なんでも自由に</span><span style="display:inline-block;">お話しください。</span></p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">お茶やお菓子の準備は必要ですか？</summary>
+          <p class="faq-a">一切不要です。お気遣いなく、リラックスした状態でお待ちください。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">会話の内容はすべて家族に報告されますか？</summary>
+          <p class="faq-a"><span style="display:inline-block;">ご家族へは</span><span style="display:inline-block;">「お元気に過ごされていたか」</span><span style="display:inline-block;">「健康状態に変化はないか」</span><span style="display:inline-block;">といった見守り内容を</span><span style="display:inline-block;">報告します。</span><span style="display:inline-block;">会話の内容は</span><span style="display:inline-block;">尊厳を守るため</span><span style="display:inline-block;">プライバシーに</span><span style="display:inline-block;">十分配慮いたします。</span></p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">支払い方法を教えてください。</summary>
+          <p class="faq-a">銀行振込による前払い方式を採用しております。詳細はお申し込み時にご案内いたします。</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 料金プラン -->
+  <section class="price" id="price">
+    <div class="container">
+      <p class="section-label">料金プラン</p>
+      <h2 class="section-title">あなたへえがお便<br class="sp-only" />料金プラン</h2>
+
+      <!-- 訪問プラン 3カード -->
+      <div class="price-cards-row">
+
+        <div class="price-card fade-in">
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週1回プラン</p>
+          <p class="price-card-freq">月4回</p>
+          <p class="price-card-amount">¥18,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥4,500</p>
+        </div>
+
+        <div class="price-card price-card-popular fade-in">
+          <span class="price-card-badge">人気</span>
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週2回プラン</p>
+          <p class="price-card-freq">月8回</p>
+          <p class="price-card-amount">¥33,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥4,125</p>
+        </div>
+
+        <div class="price-card fade-in">
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週3回プラン</p>
+          <p class="price-card-freq">月12回</p>
+          <p class="price-card-amount">¥44,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥3,666</p>
+        </div>
+
+      </div>
+
+      <!-- ハイブリッドプラン（おすすめ・中央） -->
+      <div class="price-cards-row price-cards-row-center">
+
+        <div class="price-card price-card-recommend fade-in">
+          <span class="price-card-badge price-card-badge-recommend">おすすめ</span>
+          <p class="price-card-type">訪問 + オンライン（30分）混合</p>
+          <p class="price-card-plan">ハイブリッドプラン</p>
+          <p class="price-card-freq">月8回（うち月1回訪問・7回オンライン）</p>
+          <p class="price-card-amount">¥8,900<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">週2回 × 30分</p>
+        </div>
+
+      </div>
+
+      <p class="price-note">※ おつかい代行の商品代は実費となります。※ 詳しい料金・エリアについてはお気軽にご相談ください。</p>
+
+      <div class="price-cta">
+        <a href="#contact" class="btn-primary cta-btn">まずは無料相談する</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ⑦ お問い合わせ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="section-label">お問い合わせ</p>
+    <h2 class="section-title">まずはお気軽に<br class="sp-only" />ご相談ください</h2>
+    <p class="section-desc">無料相談を承っております。お電話・LINE・フォームからどうぞ。</p>
+
+    <div class="contact-options">
+      <a href="tel:0120-000-000" class="contact-card contact-tel">
+        <span class="contact-icon">📞</span>
+        <div>
+          <p class="contact-label">お電話でのご相談</p>
+          <p class="contact-info">0120-000-000</p>
+          <p class="contact-hours">受付時間 9:00〜18:00（土日祝除く）</p>
+        </div>
+      </a>
+      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="contact-card contact-line">
+        <span class="contact-icon">💬</span>
+        <div>
+          <p class="contact-label">LINEでのご相談</p>
+          <p class="contact-info">公式LINEを追加する</p>
+          <p class="contact-hours">24時間受付・お気軽にどうぞ</p>
+        </div>
+      </a>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3 class="form-title">お問い合わせフォーム</h3>
+      <div class="form-row">
+        <label for="name">お名前 <span class="required">必須</span></label>
+        <input type="text" id="name" name="name" placeholder="山田 花子" required />
+      </div>
+      <div class="form-row">
+        <label for="phone">電話番号</label>
+        <input type="tel" id="phone" name="phone" placeholder="090-0000-0000" />
+      </div>
+      <div class="form-row">
+        <label for="email">メールアドレス <span class="required">必須</span></label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+      </div>
+      <div class="form-row">
+        <label for="service">ご興味のあるサービス</label>
+        <select id="service" name="service">
+          <option value="">選択してください</option>
+          <option value="egaobinn">あなたへえがお便</option>
+          <option value="match">えがおマッチ</option>
+          <option value="school">シニア傾聴師 資格講座</option>
+          <option value="other">その他・分からない</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">送信する</button>
+    </form>
+  </div>
+</section>
+
+<!-- 最後の一押し CTA -->
+<section class="final-cta">
+  <div class="container">
+    <p class="final-cta-sub">まだ迷っていますか？</p>
+    <h2 class="final-cta-heading">まず無料相談から</h2>
+    <a href="#contact" class="btn-primary cta-btn final-cta-btn">無料相談してみる</a>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="あなたへえがお" class="logo-img footer-logo-img" />
+        <p class="footer-tagline">笑顔のある毎日を離れていても。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#story">代表の想い</a>
+        <a href="#support">安心サポート</a>
+        <a href="#price">料金</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2024 あなたへえがお All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const spNav = document.getElementById('spNav');
+  hamburger.addEventListener('click', () => {
+    spNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+  function closeMenu() {
+    spNav.classList.remove('open');
+    hamburger.classList.remove('active');
+  }
+
+  // スティッキーヘッダー：スクロール中のみ表示、停止1.5秒後に非表示
+  const header = document.querySelector('.header');
+  let hideTimer = null;
+
+  function showHeader() {
+    header.classList.remove('header-hidden');
+  }
+  function scheduleHide() {
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-hidden');
+      }
+    }, 1500);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+      showHeader();
+      scheduleHide();
+    } else {
+      // ページ最上部に戻ったら常に表示
+      header.classList.remove('scrolled', 'header-hidden');
+      if (hideTimer) clearTimeout(hideTimer);
+    }
+  }, { passive: true });
+
+  // ヒーロー背景スライドショー（ふわっとフェード）
+  const slides = document.querySelectorAll('.hero-slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+
+  // スムーススクロール
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Intersection Observer フェードイン
+  const fadeTargets = document.querySelectorAll(
+    '.section-title, .section-label, .section-desc, ' +
+    '.worry-item, ' +
+    '.story-photo, .story-heading, .story-paragraph, .story-signature, ' +
+    '.support-card-v5, ' +
+    '.feature-card, ' +
+    '.flow-step, .flow-arrow, ' +
+    '.faq-item, ' +
+    '.price-card, .price-note, ' +
+    '.area-compact-inner, ' +
+    '.contact-card'
+  );
+
+  fadeTargets.forEach(el => el.classList.add('fade-in'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeTargets.forEach(el => observer.observe(el));
+
+  // スクロールインジケーター：ヒーローが画面外に出たら非表示
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  const heroSection = document.querySelector('.hero');
+
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrollIndicator.classList.remove('scroll-indicator-hidden');
+      } else {
+        scrollIndicator.classList.add('scroll-indicator-hidden');
+      }
+    });
+  }, { threshold: 0 });
+
+  heroObserver.observe(heroSection);
+
+  // ヒーロー白幕：スクロール量に応じて下から上へ伸びる
+  const heroWhiteOverlay = document.getElementById('heroWhiteOverlay');
+
+  window.addEventListener('scroll', () => {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollY = window.scrollY;
+    const progress = Math.min(scrollY / heroHeight, 1);
+    heroWhiteOverlay.style.height = (progress * 70) + '%';
+  }, { passive: true });
+</script>
+
+
+<!-- スマホ固定CTAボタン（FAB） -->
+<div class="sp-fab">
+  <a href="tel:0120000000" class="sp-fab-btn">
+    <i class="fa-solid fa-phone sp-fab-icon"></i>
+    <div class="sp-fab-text">
+      <span class="sp-fab-label">電話で無料相談</span>
+      <span class="sp-fab-number">0120-000-000</span>
+      <span class="sp-fab-hours">受付：9時〜18時（土日祝除く）</span>
+    </div>
+  </a>
+</div>
+
+</body>
+</html>
