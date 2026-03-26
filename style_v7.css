@@ -178,6 +178,28 @@ h2, h3 {
 }
 
 /* ===========================
+   ご利用の流れ 番号アイコン
+=========================== */
+.flow-num {
+  position: static;
+  width: 56px;
+  height: 56px;
+  background: #e8613a;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 14px rgba(232, 97, 58, 0.35);
+  transform: none;
+  top: auto;
+  left: auto;
+}
+
+/* ===========================
    最後の一押し CTA（v7調整）
 =========================== */
 .final-cta-heading {
