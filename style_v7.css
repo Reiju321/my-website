@@ -176,3 +176,16 @@ h2, h3 {
     transition: none;
   }
 }
+
+/* ===========================
+   最後の一押し CTA（v7調整）
+=========================== */
+.final-cta-heading {
+  margin-bottom: 16px;
+}
+
+.final-cta-sub {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
