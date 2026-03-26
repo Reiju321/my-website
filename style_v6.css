@@ -53,6 +53,25 @@
 }
 
 /* ===========================
+   CTA pulse アニメーション
+=========================== */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(255, 140, 0, 0.4); }
+  70%  { box-shadow: 0 0 0 12px rgba(255, 140, 0, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(255, 140, 0, 0); }
+}
+
+.cta-btn {
+  animation: pulse 2s infinite;
+}
+
+/* CTA ラッパー（セクション末尾） */
+.section-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ===========================
    フェードインアニメーション
 =========================== */
 .fade-in {
