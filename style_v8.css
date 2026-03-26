@@ -49,6 +49,13 @@ p, h1, h2, h3, h4, li {
   background: none;
   padding: 0;
   min-height: unset;
+  height: auto;
+  overflow: hidden;
+}
+
+/* 写真準備中バッジを非表示 */
+.support-card-img:has(.support-card-photo)::after {
+  content: none;
 }
 
 /* ===========================
