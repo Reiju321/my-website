@@ -45,6 +45,13 @@
 <!-- ① ヒーロー -->
 <section class="hero">
   <div class="hero-bg"></div>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="scroll-indicator-text">SCROLL</span>
+    <div class="scroll-indicator-line">
+      <div class="scroll-indicator-bar"></div>
+    </div>
+    <span class="scroll-indicator-arrow">&#9660;</span>
+  </div>
 </section>
 
 <!-- ② お悩み -->
@@ -630,14 +637,6 @@
   heroObserver.observe(heroSection);
 </script>
 
-<!-- スクロールインジケーター（右下固定） -->
-<div class="scroll-indicator" id="scrollIndicator">
-  <span class="scroll-indicator-text">SCROLL</span>
-  <div class="scroll-indicator-line">
-    <div class="scroll-indicator-bar"></div>
-  </div>
-  <span class="scroll-indicator-arrow">&#9660;</span>
-</div>
 
 <!-- スマホ固定CTAボタン（FAB） -->
 <div class="sp-fab">
