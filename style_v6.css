@@ -53,6 +53,71 @@
 }
 
 /* ===========================
+   キャッチコピーセクション
+=========================== */
+.catchcopy {
+  background: #fff;
+  padding: 88px 0 80px;
+  text-align: center;
+}
+
+.catchcopy-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  color: #c9a96e;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  margin-bottom: 24px;
+}
+
+.catchcopy-label::before,
+.catchcopy-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #c9a96e;
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+
+.catchcopy-heading {
+  font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: #2d1a0e;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+  margin-bottom: 28px;
+}
+
+.catchcopy-desc {
+  color: #5a3e2b;
+  font-size: 1.05rem;
+  line-height: 2.1;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .catchcopy {
+    padding: 64px 0 60px;
+  }
+
+  .catchcopy-heading {
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+  }
+
+  .catchcopy-desc {
+    font-size: 0.97rem;
+    padding: 0 8%;
+  }
+}
+
+/* ===========================
    最後の一押し CTA
 =========================== */
 .final-cta {
