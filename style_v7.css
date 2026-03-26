@@ -24,58 +24,60 @@ h2, h3 {
 }
 
 /* ===========================
-   お悩み 2カラムレイアウト
+   お悩み 6枚カードグリッド
 =========================== */
-.worry-layout {
-  display: flex;
-  gap: 48px;
-  align-items: flex-start;
+.onayami-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 48px;
 }
 
-.worry-image-col {
-  flex: 0 0 40%;
+.onayami-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #f0e0d0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.worry-main-img {
+.onayami-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(232, 97, 58, 0.14);
+  border-color: #e8613a;
+}
+
+.onayami-img {
   width: 100%;
-  height: 100%;
-  min-height: 320px;
+  height: 180px;
   object-fit: cover;
   object-position: center top;
-  border-radius: 20px;
   display: block;
 }
 
-@media (max-width: 768px) {
-  .worry-layout {
-    flex-direction: column;
-    gap: 28px;
-    margin-top: 32px;
-  }
+.onayami-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+}
 
-  .worry-image-col {
-    flex: none;
-    width: 100%;
-  }
-
-  .worry-main-img {
-    height: 220px;
-    min-height: unset;
+@media (max-width: 900px) {
+  .onayami-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ===========================
-   お悩みチェックリスト
-=========================== */
-.worry-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+@media (max-width: 600px) {
+  .onayami-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .onayami-img {
+    height: 200px;
+  }
 }
 
 .worry-item {

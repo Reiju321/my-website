@@ -77,36 +77,49 @@
   <div class="container">
     <p class="section-label">こんなお悩みはありませんか？</p>
     <h2 class="section-title">離れて暮らす親の<br class="sp-only" />「見えない不安」</h2>
-    <div class="worry-layout">
-      <div class="worry-image-col">
-        <img src="./images/worry1.jpg" alt="高齢者の不安なイメージ" class="worry-main-img" />
-      </div>
-      <ul class="worry-list">
-        <li class="worry-item">
+    <div class="onayami-grid">
+      <div class="onayami-card">
+        <img src="img/onayami1.jpg" alt="電話しても大丈夫としか言わない" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">電話しても「大丈夫」としか言わない</span>
-        </li>
-        <li class="worry-item">
+        </div>
+      </div>
+      <div class="onayami-card">
+        <img src="img/onayami2.jpg" alt="薬をちゃんと飲んでいるか分からない" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">薬をちゃんと飲んでいるか分からない</span>
-        </li>
-        <li class="worry-item">
+        </div>
+      </div>
+      <div class="onayami-card">
+        <img src="img/onayami3.jpg" alt="認知症が始まっていないか心配" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">認知症が始まっていないか心配</span>
-        </li>
-        <li class="worry-item">
+        </div>
+      </div>
+      <div class="onayami-card">
+        <img src="img/onayami4.jpg" alt="転倒・骨折が怖い" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">転倒・骨折が怖い</span>
-        </li>
-        <li class="worry-item">
+        </div>
+      </div>
+      <div class="onayami-card">
+        <img src="img/onayami5.jpg" alt="詐欺・悪徳商法に引っかからないか" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">詐欺・悪徳商法に引っかからないか</span>
-        </li>
-        <li class="worry-item">
+        </div>
+      </div>
+      <div class="onayami-card">
+        <img src="img/onayami6.jpg" alt="一人でいて寂しくしていないか" class="onayami-img" />
+        <div class="onayami-body">
           <span class="worry-check">✓</span>
           <span class="worry-text">一人でいて寂しくしていないか</span>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -622,7 +635,7 @@
   // Intersection Observer フェードイン
   const fadeTargets = document.querySelectorAll(
     '.section-title, .section-label, .section-desc, ' +
-    '.worry-item, ' +
+    '.onayami-card, ' +
     '.story-photo, .story-heading, .story-paragraph, .story-signature, ' +
     '.support-card-v5, ' +
     '.feature-card, ' +
