@@ -38,6 +38,73 @@
 }
 
 /* ===========================
+   スクロールインジケーター（右下固定）
+=========================== */
+.scroll-indicator {
+  position: fixed;
+  right: 24px;
+  bottom: 48px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.scroll-indicator-hidden {
+  opacity: 0;
+}
+
+.scroll-indicator-text {
+  writing-mode: vertical-rl;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-indicator-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  animation: scroll-bar-anim 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
+@keyframes scroll-bar-anim {
+  0%   { transform: scaleY(0) translateY(0); opacity: 1; }
+  60%  { transform: scaleY(1) translateY(0); opacity: 1; }
+  100% { transform: scaleY(1) translateY(0); opacity: 0; }
+}
+
+.scroll-indicator-arrow {
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.65);
+  animation: scroll-arrow-anim 2s ease-in-out infinite;
+}
+
+@keyframes scroll-arrow-anim {
+  0%, 30% { transform: translateY(-4px); opacity: 0; }
+  70%      { transform: translateY(0);    opacity: 1; }
+  100%     { transform: translateY(2px);  opacity: 0; }
+}
+
+/* ===========================
    ご利用の流れ
 =========================== */
 .flow-step p {

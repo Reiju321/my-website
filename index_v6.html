@@ -585,7 +585,26 @@
       }
     });
   });
+
+  // スクロールインジケーター：120px 以上で非表示
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 120) {
+      scrollIndicator.classList.add('scroll-indicator-hidden');
+    } else {
+      scrollIndicator.classList.remove('scroll-indicator-hidden');
+    }
+  }, { passive: true });
 </script>
+
+<!-- スクロールインジケーター（右下固定） -->
+<div class="scroll-indicator" id="scrollIndicator">
+  <span class="scroll-indicator-text">SCROLL</span>
+  <div class="scroll-indicator-line">
+    <div class="scroll-indicator-bar"></div>
+  </div>
+  <span class="scroll-indicator-arrow">&#9660;</span>
+</div>
 
 <!-- スマホ固定CTAボタン（FAB） -->
 <div class="sp-fab">
