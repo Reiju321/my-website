@@ -24,16 +24,58 @@ h2, h3 {
 }
 
 /* ===========================
+   お悩み 2カラムレイアウト
+=========================== */
+.worry-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin-top: 48px;
+}
+
+.worry-image-col {
+  flex: 0 0 40%;
+}
+
+.worry-main-img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .worry-layout {
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 32px;
+  }
+
+  .worry-image-col {
+    flex: none;
+    width: 100%;
+  }
+
+  .worry-main-img {
+    height: 220px;
+    min-height: unset;
+  }
+}
+
+/* ===========================
    お悩みチェックリスト
 =========================== */
 .worry-list {
   list-style: none;
   padding: 0;
-  margin: 48px auto 0;
+  margin: 0;
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 720px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .worry-item {
