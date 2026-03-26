@@ -613,15 +613,21 @@
 
   fadeTargets.forEach(el => observer.observe(el));
 
-  // スクロールインジケーター：120px 以上で非表示
+  // スクロールインジケーター：ヒーローが画面外に出たら非表示
   const scrollIndicator = document.getElementById('scrollIndicator');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 120) {
-      scrollIndicator.classList.add('scroll-indicator-hidden');
-    } else {
-      scrollIndicator.classList.remove('scroll-indicator-hidden');
-    }
-  }, { passive: true });
+  const heroSection = document.querySelector('.hero');
+
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrollIndicator.classList.remove('scroll-indicator-hidden');
+      } else {
+        scrollIndicator.classList.add('scroll-indicator-hidden');
+      }
+    });
+  }, { threshold: 0 });
+
+  heroObserver.observe(heroSection);
 </script>
 
 <!-- スクロールインジケーター（右下固定） -->

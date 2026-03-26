@@ -81,9 +81,9 @@
    スクロールインジケーター（右下固定）
 =========================== */
 .scroll-indicator {
-  position: fixed;
+  position: absolute;
   right: 24px;
-  bottom: 48px;
+  bottom: 32px;
   z-index: 100;
   display: flex;
   flex-direction: column;
