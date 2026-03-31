@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あなたへえがお｜親の笑顔と、家族の安心を。</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+            },
+            warm: {
+              50: '#fdf8f0',
+              100: '#fef3e2',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #fff7ed 0%, #fef3e2 50%, #fde8c8 100%); }
+    .card-hover { transition: all 0.25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(249,115,22,0.13); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .animate-fade-in { animation: fadeInUp 0.7s ease both; }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    /* ──────────── Lucide アイコンをReactコンポーネントとして使えるラッパー ──────────── */
+    const Icon = ({ name, size = 24, className = "" }) => {
+      const ref = useRef(null);
+      useEffect(() => {
+        if (ref.current && window.lucide) {
+          ref.current.innerHTML = "";
+          const el = document.createElement("i");
+          el.setAttribute("data-lucide", name);
+          el.className = className;
+          ref.current.appendChild(el);
+          lucide.createIcons({ icons: { [name]: lucide[name] }, elements: [el] });
+        }
+      }, [name, className]);
+      return <span ref={ref} style={{ display: "inline-flex", alignItems: "center" }} />;
+    };
+
+    /* ──────────── データ定義 ──────────── */
+    const SERVICES = [
+      {
+        emoji: "💬",
+        title: "あなたへえがお便",
+        subtitle: "高齢者訪問おしゃべり・見守りサービス",
+        desc: "ただの「お話し相手」ではありません。専門的なトレーニングを受けたスタッフが定期訪問し、心身の変化・認知機能・生活環境を詳細にチェック。遠く離れた家族に代わり、親の日常を守る「生活見守りインフラ」です。",
+        color: "from-orange-50 to-amber-50",
+        border: "border-orange-200",
+        badge: "主力サービス",
+      },
+      {
+        emoji: "🤝",
+        title: "えがおマッチ",
+        subtitle: "地域住民×高齢者マッチングプラットフォーム",
+        desc: "「少し話し相手になりたい」「買い物を手伝いたい」という地域の方と、支援を必要とする高齢者をつなぐサービス。地域の絆を再生しながら、孤立リスクを組織的に低減します。",
+        color: "from-green-50 to-emerald-50",
+        border: "border-green-200",
+        badge: "",
+      },
+      {
+        emoji: "🎓",
+        title: "シニア傾聴師 資格講座",
+        subtitle: "おしゃべりを「仕事」にするオンラインスクール",
+        desc: "傾聴・高齢者心理・見守りスキルを学び「シニア傾聴師」資格を取得。在宅副業・独立も可能な、超高齢社会で必要とされる専門家を養成します。",
+        color: "from-blue-50 to-sky-50",
+        border: "border-blue-200",
+        badge: "",
+      },
+    ];
+
+    const FEATURES = [
+      {
+        icon: "heart",
+        title: "傾聴・対話サービス",
+        desc: "孤独・鬱・認知機能低下の最大リスク要因は「孤立」。週1〜2回の傾聴訪問が、親の精神的健康を守る予防インフラとして機能します。",
+        risk: "孤独死・うつリスク対策",
+      },
+      {
+        icon: "shield-check",
+        title: "見守りレポート",
+        desc: "顔色・発言・動作から認知症サインや体調変化を専門スタッフがチェック。早期発見が医療コストを大幅に削減します。",
+        risk: "認知症早期発見インフラ",
+      },
+      {
+        icon: "calendar",
+        title: "お薬管理チェック",
+        desc: "残薬確認・飲み忘れ報告で服薬コンプライアンスを維持。薬の管理ミスは入院リスクに直結する、命に関わる重要管理項目です。",
+        risk: "服薬ミス・入院リスク低減",
+      },
+      {
+        icon: "smartphone",
+        title: "スマホ・LINEレッスン",
+        desc: "ビデオ通話・LINE操作を丁寧にサポート。「いつでも顔が見える」環境は孤独感を解消し、家族の安否確認コストを劇的に下げます。",
+        risk: "家族連絡インフラ構築",
+      },
+      {
+        icon: "shopping-cart",
+        title: "買い物同行・代行",
+        desc: "食料品・日用品の購入サポート。外出機会の確保は身体機能維持に直結。引きこもりが引き起こす廃用症候群を予防します。",
+        risk: "廃用症候群・栄養不足予防",
+      },
+      {
+        icon: "camera",
+        title: "近況写真撮影・送付",
+        desc: "訪問時に撮影した親の元気な姿を家族へ定期送付。「百聞は一見に如かず」の原則で、家族の不安を具体的な安心に変えます。",
+        risk: "家族の精神的安心サポート",
+      },
+      {
+        icon: "alert-triangle",
+        title: "詐欺・危険対策",
+        desc: "電話・訪問詐欺の情報提供と対策アドバイス。高齢者を狙う詐欺被害の平均損失額は数百万円。専門知識で未然に防ぎます。",
+        risk: "詐欺被害防止インフラ",
+      },
+      {
+        icon: "home",
+        title: "自宅環境安全チェック",
+        desc: "転倒リスク・段差・照明などの住環境を定期チェック。65歳以上の事故死因第2位は「転倒・転落」。自宅こそが危険地帯です。",
+        risk: "転倒・自宅事故リスク管理",
+      },
+      {
+        icon: "file-text",
+        title: "定期報告レポート",
+        desc: "毎訪問後に詳細な状態報告書を家族へ送付。「何かあったとき」の証跡にもなり、医療機関との連携もスムーズにします。",
+        risk: "家族への情報共有インフラ",
+      },
+      {
+        icon: "users",
+        title: "緊急連絡ネットワーク",
+        desc: "異変発見時の即時家族連絡体制を整備。プロが現場に定期的にいるからこそ、緊急時の初動が速く被害を最小化できます。",
+        risk: "緊急時初動対応インフラ",
+      },
+      {
+        icon: "check-circle",
+        title: "包括的健康状態確認",
+        desc: "体重・食欲・睡眠・気分など多角的な健康チェックを記録・蓄積。データの蓄積が将来の医療判断を助ける「健康履歴」となります。",
+        risk: "健康データ蓄積・管理",
+      },
+    ];
+
+    const PLANS = [
+      {
+        name: "週1回コース",
+        times: "月4回",
+        unit: "4,500円",
+        monthly: "18,000円",
+        note: "まず試したい方に",
+        highlight: false,
+      },
+      {
+        name: "週2回コース",
+        times: "月8回",
+        unit: "4,125円",
+        monthly: "33,000円",
+        note: "最も人気のプラン",
+        highlight: true,
+      },
+      {
+        name: "週3回コース",
+        times: "月12回",
+        unit: "3,916円",
+        monthly: "47,000円",
+        note: "手厚いサポートに",
+        highlight: false,
+      },
+    ];
+
+    const VOICES = [
+      {
+        name: "東京都・田中さん（60代）",
+        role: "大阪在住の母（82歳）を利用",
+        text: "離れて暮らす母が心配で夜も眠れない時期がありました。えがお便を始めてから、毎週レポートが届くので「今週も元気だった」と確認でき、本当に安心しました。先月は薬の飲み忘れも発見してもらい、早めに対処できました。",
+      },
+      {
+        name: "神奈川県・山本さん（50代）",
+        role: "父（78歳）を利用",
+        text: "父は頑固で施設には絶対行かないと言っていましたが、訪問スタッフさんとはすぐに仲良くなれて。「あの人が来る日が楽しみ」と言うようになり、表情が明るくなりました。家族だけでは限界だった部分を補ってもらっています。",
+      },
+      {
+        name: "埼玉県・佐藤さん（40代）",
+        role: "祖母（87歳）を利用",
+        text: "祖母が詐欺電話に引っかかりそうになったとき、スタッフさんが気づいて教えてくれました。被害を未然に防いでもらったこと、家族だけでは絶対に気づけなかったと思います。もはやわが家の安全インフラです。",
+      },
+    ];
+
+    /* ──────────── コンポーネント ──────────── */
+
+    const Header = ({ onContact }) => (
+      <nav className="bg-white py-3 px-4 shadow-sm sticky top-0 z-50 border-b border-orange-100">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">😊</span>
+            <div>
+              <div className="text-xs text-slate-400 leading-none">株式会社</div>
+              <div className="text-lg font-black text-orange-600 leading-tight">あなたへえがお</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <a href="tel:0120000000" className="hidden md:flex items-center gap-1 text-sm text-slate-600 hover:text-orange-600 transition">
+              <Icon name="phone" size={15} />
+              <span>0120-000-000</span>
+            </a>
+            <button
+              onClick={onContact}
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow transition flex items-center gap-1"
+            >
+              <Icon name="message-circle" size={15} />
+              <span>LINE相談</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    );
+
+    const Hero = ({ onContact }) => (
+      <section className="hero-gradient py-16 md:py-24 px-4 text-center overflow-hidden relative">
+        <div className="absolute inset-0 opacity-5" style={{backgroundImage: "radial-gradient(circle, #f97316 1px, transparent 1px)", backgroundSize: "32px 32px"}} />
+        {/* 背景イラスト：右下に大きく配置 */}
+        <img
+          src="images/23076_color.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute bottom-0 right-0 w-64 md:w-96 opacity-10 pointer-events-none select-none"
+          style={{ transform: "translate(10%, 10%)" }}
+        />
+        {/* 背景イラスト：左上に小さく配置（デスクトップのみ） */}
+        <img
+          src="images/23076_color.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute top-4 left-4 w-32 opacity-5 pointer-events-none select-none"
+          style={{ transform: "rotate(-15deg) translate(-10%, -10%)" }}
+        />
+        <div className="max-w-4xl mx-auto relative animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 text-sm font-bold px-4 py-1.5 rounded-full mb-6 shadow-sm">
+            <Icon name="shield-check" size={14} />
+            <span>高齢者見守り×リスク管理の専門会社</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6 text-slate-800">
+            親の笑顔と、<br />
+            <span className="text-orange-500">家族の安心</span>を。
+          </h1>
+          <p className="text-lg md:text-xl text-slate-600 mb-4 max-w-2xl mx-auto leading-relaxed">
+            「ただの話し相手」ではありません。<br />
+            専門スタッフが定期訪問し、<strong className="text-slate-800">健康・安全・生活</strong>を見守る<br className="hidden md:block" />
+            <strong className="text-orange-600">家族のリスク管理インフラ</strong>です。
+          </p>
+          <p className="text-sm text-slate-400 mb-8">遠距離介護の不安を、プロの力で"安心"に変えます。</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3">
+            <button
+              onClick={onContact}
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl transition flex items-center justify-center gap-2"
+            >
+              <span className="text-xl">💬</span>
+              LINEで無料相談する
+            </button>
+            <a
+              href="#services"
+              className="bg-white hover:bg-orange-50 text-orange-600 border-2 border-orange-300 px-8 py-4 rounded-2xl font-bold text-lg transition flex items-center justify-center gap-2"
+            >
+              サービスを見る
+              <Icon name="chevron-down" size={18} />
+            </a>
+          </div>
+          <div className="flex justify-center gap-6 mt-10 text-sm text-slate-500">
+            {["初回無料相談", "最短翌週スタート", "契約縛りなし"].map((t) => (
+              <div key={t} className="flex items-center gap-1">
+                <span className="text-green-500">✓</span>
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
+    const Problem = () => (
+      <section className="bg-slate-800 py-14 px-4 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-orange-300 font-bold text-sm mb-3 tracking-widest">PROBLEM</p>
+          <h2 className="text-2xl md:text-3xl font-black mb-10">こんな不安、抱えていませんか？</h2>
+          <div className="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+            {[
+              "親が一人暮らしで、何かあっても気づけない",
+              "遠くに住んでいて頻繁に帰省できない",
+              "電話しても「大丈夫」しか言わない",
+              "認知症が始まっているのか不安",
+              "詐欺被害が心配だが確認できない",
+              "施設には入れたくないが、在宅も限界",
+            ].map((text, i) => (
+              <div key={i} className="flex items-start gap-3 bg-slate-700/60 rounded-xl p-4">
+                <span className="text-orange-400 mt-0.5 flex-shrink-0">⚠</span>
+                <p className="text-slate-200 text-sm leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-slate-300 leading-relaxed">
+            これらの不安は、<strong className="text-white">「定期的に会いに行く専門家」</strong>がいれば、<br />
+            ほとんど解決できます。それが「あなたへえがお便」です。
+          </p>
+        </div>
+      </section>
+    );
+
+    const Services = () => (
+      <section id="services" className="py-20 px-4 max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-orange-500 font-bold text-sm mb-2 tracking-widest">SERVICES</p>
+          <h2 className="text-3xl font-black mb-3">3つの主な事業</h2>
+          <p className="text-slate-500">高齢社会の課題に、多角的にアプローチします</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {SERVICES.map((s, i) => (
+            <div
+              key={i}
+              className={`bg-gradient-to-br ${s.color} p-7 rounded-3xl border ${s.border} card-hover relative`}
+            >
+              {s.badge && (
+                <span className="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                  {s.badge}
+                </span>
+              )}
+              <div className="text-4xl mb-4">{s.emoji}</div>
+              <h3 className="text-xl font-black text-slate-800 mb-1">{s.title}</h3>
+              <p className="text-sm text-slate-500 mb-3 font-medium">{s.subtitle}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+
+    const Features = () => (
+      <section className="py-20 bg-warm-50 px-4" id="features">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-orange-500 font-bold text-sm mb-2 tracking-widest">WHY US</p>
+            <h2 className="text-3xl font-black mb-3">選ばれる11の理由</h2>
+            <p className="text-slate-500 max-w-xl mx-auto leading-relaxed">
+              サービスの一つひとつが、家族の「不安」を具体的な「安心」に変える<br />
+              <strong className="text-orange-600">リスク管理インフラ</strong>として設計されています。
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {FEATURES.map((f, i) => (
+              <div
+                key={i}
+                className="bg-white p-6 rounded-2xl border border-slate-100 card-hover group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500 transition">
+                    <span className="text-orange-500 group-hover:text-white transition">
+                      <Icon name={f.icon} size={20} />
+                    </span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs bg-orange-50 text-orange-600 font-bold px-2 py-0.5 rounded-full whitespace-nowrap">{i + 1}</span>
+                      <h4 className="font-black text-slate-800 text-sm">{f.title}</h4>
+                    </div>
+                    <p className="text-xs text-slate-500 mb-2 leading-relaxed">{f.desc}</p>
+                    <span className="inline-block text-xs bg-red-50 text-red-600 font-bold px-2 py-0.5 rounded-full">
+                      🔒 {f.risk}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
+    const Voices = () => (
+      <section className="py-20 px-4 max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-orange-500 font-bold text-sm mb-2 tracking-widest">VOICES</p>
+          <h2 className="text-3xl font-black mb-3">ご家族からの声</h2>
+          <p className="text-slate-500">「安心」を手に入れた、リアルな体験談</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {VOICES.map((v, i) => (
+            <div key={i} className="bg-white p-7 rounded-2xl border border-slate-100 shadow-sm card-hover">
+              <div className="text-orange-300 text-5xl leading-none mb-3 font-serif">"</div>
+              <p className="text-slate-600 text-sm leading-relaxed mb-5">{v.text}</p>
+              <div className="border-t border-slate-100 pt-4">
+                <p className="font-bold text-slate-800 text-sm">{v.name}</p>
+                <p className="text-xs text-slate-400">{v.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+
+    const Pricing = () => (
+      <section className="py-20 px-4 bg-orange-50" id="pricing">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-orange-500 font-bold text-sm mb-2 tracking-widest">PRICING</p>
+            <h2 className="text-3xl font-black mb-3">ご利用料金</h2>
+            <p className="text-slate-500">すべてのプランに11項目のサポートが含まれます</p>
+          </div>
+
+          {/* モバイル：カード形式 */}
+          <div className="md:hidden space-y-4">
+            {PLANS.map((p, i) => (
+              <div
+                key={i}
+                className={`bg-white rounded-2xl p-6 border-2 ${p.highlight ? "border-orange-400 shadow-xl" : "border-slate-100"}`}
+              >
+                {p.highlight && (
+                  <div className="text-center mb-3">
+                    <span className="bg-orange-500 text-white text-xs font-black px-3 py-1 rounded-full">🌟 {p.note}</span>
+                  </div>
+                )}
+                <h3 className="font-black text-lg text-center mb-3">{p.name}</h3>
+                <div className="text-center mb-3">
+                  <span className="text-3xl font-black text-orange-600">{p.monthly}</span>
+                  <span className="text-slate-400 text-sm">/月</span>
+                </div>
+                <div className="text-center text-sm text-slate-500">
+                  {p.times}（1回あたり{p.unit}）
+                </div>
+                {!p.highlight && (
+                  <p className="text-center text-xs text-slate-400 mt-2">{p.note}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* デスクトップ：テーブル形式 */}
+          <div className="hidden md:block bg-white rounded-3xl overflow-hidden shadow-xl border border-orange-100">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-orange-500 text-white">
+                  <th className="p-5 font-black text-left">プラン</th>
+                  <th className="p-5 font-black text-center">回数</th>
+                  <th className="p-5 font-black text-center">1回あたり</th>
+                  <th className="p-5 font-black text-center">月額</th>
+                  <th className="p-5 font-black text-center">備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                {PLANS.map((p, i) => (
+                  <tr
+                    key={i}
+                    className={`border-b border-slate-100 ${p.highlight ? "bg-orange-50" : "hover:bg-stone-50"} transition`}
+                  >
+                    <td className="p-5">
+                      <span className="font-black text-slate-800">{p.name}</span>
+                    </td>
+                    <td className="p-5 text-center text-slate-600">{p.times}</td>
+                    <td className="p-5 text-center text-slate-600">{p.unit}</td>
+                    <td className="p-5 text-center">
+                      <span className="text-xl font-black text-orange-600">{p.monthly}</span>
+                    </td>
+                    <td className="p-5 text-center">
+                      {p.highlight ? (
+                        <span className="bg-orange-100 text-orange-700 text-xs font-bold px-2.5 py-1 rounded-full">🌟 {p.note}</span>
+                      ) : (
+                        <span className="text-slate-400 text-sm">{p.note}</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-4 text-sm text-slate-600">
+            {[
+              { icon: "✓", text: "別途交通費・消費税（10%）がかかります" },
+              { icon: "✓", text: "初回は無料体験訪問を実施しています" },
+              { icon: "✓", text: "契約縛りなし・いつでも解約可能" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 bg-white rounded-xl p-4 border border-slate-100">
+                <span className="text-green-500 font-bold flex-shrink-0">{item.icon}</span>
+                <span>{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
+    const Contact = () => (
+      <section className="py-20 px-4 bg-slate-800 text-white text-center" id="contact">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-orange-300 font-bold text-sm mb-3 tracking-widest">CONTACT</p>
+          <h2 className="text-3xl font-black mb-4">まずは無料でご相談ください</h2>
+          <p className="text-slate-300 leading-relaxed mb-10">
+            「料金が気になる」「対応エリアを確認したい」「まだ迷っている」、<br />
+            どんなご質問でもOKです。LINEで気軽にメッセージをどうぞ。
+          </p>
+          <a
+            href="https://line.me/R/ti/p/@your-line-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl transition"
+          >
+            <span className="text-2xl">💬</span>
+            LINEで無料相談する
+          </a>
+          <p className="mt-5 text-slate-400 text-sm">
+            平日 9:00〜18:00 対応 ／ 通話・メッセージどちらでもOK
+          </p>
+
+          <div className="mt-12 grid grid-cols-3 gap-6 text-center">
+            {[
+              { num: "500+", label: "サポート実績" },
+              { num: "98%", label: "継続率" },
+              { num: "4.9", label: "満足度（5点満点）" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <div className="text-3xl font-black text-orange-400">{stat.num}</div>
+                <div className="text-sm text-slate-400 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+
+    const Footer = () => (
+      <footer className="bg-slate-900 text-slate-400 py-10 px-4 text-sm">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">😊</span>
+                <span className="text-white font-black text-base">株式会社あなたへえがお</span>
+              </div>
+              <p className="text-xs leading-relaxed">
+                高齢者の豊かな日常と、<br />
+                離れて暮らす家族の安心を支えます。
+              </p>
+            </div>
+            <div className="flex flex-col gap-1 text-xs">
+              <a href="#services" className="hover:text-white transition">サービス紹介</a>
+              <a href="#features" className="hover:text-white transition">11のサポート</a>
+              <a href="#pricing" className="hover:text-white transition">料金プラン</a>
+              <a href="#contact" className="hover:text-white transition">お問い合わせ</a>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 mt-8 pt-6 text-xs text-center">
+            © 2025 株式会社あなたへえがお. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    );
+
+    /* ──────────── App（メインコンポーネント） ──────────── */
+    const App = () => {
+      const scrollToContact = () => {
+        const el = document.getElementById("contact");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      };
+
+      return (
+        <div className="min-h-screen">
+          <Header onContact={scrollToContact} />
+          <Hero onContact={scrollToContact} />
+          <Problem />
+          <Services />
+          <Features />
+          <Voices />
+          <Pricing />
+          <Contact />
+          <Footer />
+        </div>
+      );
+    };
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
