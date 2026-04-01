@@ -559,30 +559,21 @@
       <h3 class="form-title">お問い合わせフォーム</h3>
       <div class="form-row">
         <label for="name">お名前 <span class="required">必須</span></label>
-        <input type="text" id="name" name="name" placeholder="山田 花子" required />
+        <input type="text" id="name" name="entry.738599201" placeholder="山田 花子" required />
       </div>
       <div class="form-row">
         <label for="phone">電話番号</label>
-        <input type="tel" id="phone" name="phone" placeholder="090-0000-0000" />
+        <input type="tel" id="phone" name="entry.1930308041" placeholder="090-0000-0000" />
       </div>
       <div class="form-row">
         <label for="email">メールアドレス <span class="required">必須</span></label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required />
-      </div>
-      <div class="form-row">
-        <label for="service">ご興味のあるサービス</label>
-        <select id="service" name="service">
-          <option value="">選択してください</option>
-          <option value="egaobinn">あなたへえがお便</option>
-          <option value="match">えがおマッチ</option>
-          <option value="school">シニア傾聴師 資格講座</option>
-          <option value="other">その他・分からない</option>
-        </select>
+        <input type="email" id="email" name="entry.1420384703" placeholder="example@email.com" required />
       </div>
       <div class="form-row">
         <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+        <textarea id="message" name="entry.1886232057" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
       </div>
+      <div id="formSuccess" style="display:none; color:#2e7d32; font-weight:bold; margin-bottom:12px;">送信しました。ありがとうございます！</div>
       <button type="submit" class="btn-submit">送信する</button>
     </form>
   </div>
@@ -728,6 +719,24 @@
     const progress = Math.min(scrollY / heroHeight, 1);
     heroWhiteOverlay.style.height = (progress * 70) + '%';
   }, { passive: true });
+
+  // お問い合わせフォーム送信
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLScUSaGsRXdhL99pGps8xZKtnAzET4Z776Zli0iOK8cKXsj0dQ/formResponse', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      contactForm.reset();
+    }).catch(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      contactForm.reset();
+    });
+  });
 </script>
 
 
