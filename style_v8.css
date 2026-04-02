@@ -257,19 +257,35 @@ p, h1, h2, h3, h4, li {
 }
 
 /* ===========================
+   ヘッダーロゴ拡大
+=========================== */
+.logo-img {
+  height: 72px;
+}
+
+/* ===========================
    フッター強化
 =========================== */
 .footer {
-  background: #1a0a00;
+  background: #fdf6f0;
+  color: #3d1f0a;
 }
 
-.footer-tagline,
+.footer-logo-img {
+  height: 130px;
+}
+
+.footer-tagline {
+  color: #7a5a47;
+}
+
 .footer-copy {
-  color: rgba(255, 255, 255, 0.5);
+  color: #7a5a47;
+  border-top-color: #e8d5c8;
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.65);
+  color: #5a3e2b;
 }
 
 .footer-links a:hover {
