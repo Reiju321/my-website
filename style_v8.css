@@ -260,7 +260,11 @@ p, h1, h2, h3, h4, li {
    ヘッダーロゴ拡大
 =========================== */
 .logo-img {
-  height: 72px;
+  height: 100px;
+}
+
+.header-inner {
+  height: 110px;
 }
 
 /* ===========================
@@ -272,7 +276,7 @@ p, h1, h2, h3, h4, li {
 }
 
 .footer-logo-img {
-  height: 130px;
+  height: 200px;
 }
 
 .footer-tagline {
