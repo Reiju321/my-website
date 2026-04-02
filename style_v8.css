@@ -264,11 +264,11 @@ p, h1, h2, h3, h4, li {
    ヘッダーロゴ拡大
 =========================== */
 .logo-img {
-  height: 100px;
+  height: 70px;
 }
 
 .header-inner {
-  height: 110px;
+  height: 80px;
 }
 
 /* ===========================
