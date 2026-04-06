@@ -2,10 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>あなたへえがお｜高齢者おしゃべりサービス</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style_v2.css" />
+  <link rel="stylesheet" href="style_v4.css" />
+  <link rel="stylesheet" href="style_v5.css" />
+  <link rel="stylesheet" href="style_v6.css" />
+  <link rel="stylesheet" href="style_v7.css" />
+  <link rel="stylesheet" href="style_v8.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,233 +20,284 @@
 <header class="header">
   <div class="header-inner">
     <div class="logo">
-      <img src="logo.png" alt="あなたへえがお" class="logo-img" />
+      <img src="logo.jpg" alt="あなたへえがお" class="logo-img" />
     </div>
     <nav class="nav">
-      <a href="#services">サービス</a>
-      <a href="#features">サポート内容</a>
+      <a href="#story">代表の想い</a>
+      <a href="#support">安心サポート</a>
       <a href="#price">料金</a>
       <a href="#flow">ご利用の流れ</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
-    <a href="#contact" class="header-cta">無料相談はこちら</a>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="sp-nav" id="spNav">
-    <a href="#services" onclick="closeMenu()">サービス</a>
-    <a href="#features" onclick="closeMenu()">サポート内容</a>
+    <a href="#story" onclick="closeMenu()">代表の想い</a>
+    <a href="#support" onclick="closeMenu()">安心サポート</a>
     <a href="#price" onclick="closeMenu()">料金</a>
+    <a href="#flow" onclick="closeMenu()">ご利用の流れ</a>
     <a href="#contact" onclick="closeMenu()">お問い合わせ</a>
+    <a href="#contact" class="sp-nav-cta" onclick="closeMenu()">📞 無料相談はこちら</a>
   </nav>
 </header>
 
-<!-- ヒーロー -->
+<!-- ① ヒーロー -->
 <section class="hero">
-  <!-- 背景スライドショー -->
-  <div class="hero-slideshow">
-    <div class="hero-slide active" style="background-image:url('photo1.png')"></div>
-    <div class="hero-slide" style="background-image:url('photo2.png')"></div>
-    <div class="hero-slide" style="background-image:url('photo3.png')"></div>
-    <div class="hero-slide" style="background-image:url('photo4.png')"></div>
-    <div class="hero-slide" style="background-image:url('photo5.png')"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-white-overlay" id="heroWhiteOverlay"></div>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span class="scroll-indicator-text">SCROLL</span>
+    <div class="scroll-indicator-line">
+      <div class="scroll-indicator-bar"></div>
+    </div>
+    <span class="scroll-indicator-arrow">&#9660;</span>
   </div>
-  <!-- テキスト可読性のためのオーバーレイ -->
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <p class="hero-sub">高齢者専門おしゃべりサービス</p>
-    <h1 class="hero-title">
-      笑顔のある毎日を、<br />
-      離れていても。
-    </h1>
-    <p class="hero-desc">
-      お父さん、お母さんが元気でいるか<br class="sp-br" />心配ではありませんか？<br />
-      えがおは、高齢者のおしゃべり相手をしながら、<br />
-      離れて暮らすご家族へ<br class="sp-br" />「安心」をお届けするサービスです。
+</section>
+
+<!-- キャッチコピー -->
+<section class="catchcopy">
+  <div class="container">
+    <p class="catchcopy-label">高齢者専門おしゃべりサービス</p>
+    <h2 class="catchcopy-heading">笑顔のある毎日を<br />離れていても。
+    </h2>
+    <p class="catchcopy-desc">離れて暮らすご両親、元気にお過ごしですか？<br />私たちがおしゃべり相手になり、<br />日々の変化をレポート。<br />遠くで見守るご家族へ<br />「安心」をお届けします。
     </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">無料相談してみる</a>
-      <a href="#services" class="btn-secondary">サービスを見る</a>
+  </div>
+</section>
+
+<!-- 選ばれる3つの理由 -->
+<section class="reasons-v8">
+  <div class="container">
+    <p class="section-label">選ばれる理由</p>
+    <h2 class="section-title">なぜ「あなたへえがお」が<br />選ばれるのか</h2>
+    <div class="reasons-grid-v8">
+
+      <div class="reason-card-v8">
+        <div class="reason-num-v8">01</div>
+        <h3 class="reason-title-v8">ただのおしゃべりじゃない</h3>
+        <p class="reason-desc-v8">会話しながら11項目をチェック。<br />薬の飲み忘れ・認知症のサイン・詐欺被害まで、<br />会話の中で自然に見守ります。</p>
+      </div>
+
+      <div class="reason-card-v8">
+        <div class="reason-num-v8">02</div>
+        <h3 class="reason-title-v8">毎回「見守りレポート」をお届け</h3>
+        <p class="reason-desc-v8">訪問のたびに詳細レポートをご家族へ送信。<br />遠くにいても「今日も元気」が<br />リアルタイムで分かります。</p>
+      </div>
+
+      <div class="reason-card-v8">
+        <div class="reason-num-v8">03</div>
+        <h3 class="reason-title-v8">月額8,900円〜。介護保険不要</h3>
+        <p class="reason-desc-v8">要介護認定なしでも利用OK。<br />「まだ介護は早い」というご家族にこそ<br />使っていただけるサービスです。</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- 課題提起 -->
+<!-- ② お悩み -->
 <section class="problem">
   <div class="container">
     <p class="section-label">こんなお悩みはありませんか？</p>
-    <h2 class="section-title">離れて暮らす親の<br />「見えない不安」</h2>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <span class="problem-icon">📞</span>
-        <p>電話しても「大丈夫」としか言わない</p>
+    <h2 class="section-title">離れて暮らす親の<br class="sp-only" />「見えない不安」</h2>
+    <div class="onayami-grid">
+      <div class="onayami-card">
+        <img src="img/onayami1.jpg" alt="電話しても大丈夫としか言わない" class="onayami-img" />
+        <div class="onayami-body">電話しても「大丈夫」としか言わない</div>
       </div>
-      <div class="problem-card">
-        <span class="problem-icon">🏥</span>
-        <p>薬をちゃんと飲んでいるか分からない</p>
+      <div class="onayami-card">
+        <img src="img/onayami2.jpg" alt="薬をちゃんと飲んでいるか分からない" class="onayami-img" />
+        <div class="onayami-body">薬をちゃんと飲んでいるか分からない</div>
       </div>
-      <div class="problem-card">
-        <span class="problem-icon">🧠</span>
-        <p>認知症が始まっていないか心配</p>
+      <div class="onayami-card">
+        <img src="img/onayami3.jpg" alt="認知症が始まっていないか心配" class="onayami-img" />
+        <div class="onayami-body">認知症が始まっていないか心配</div>
       </div>
-      <div class="problem-card">
-        <span class="problem-icon">🦴</span>
-        <p>転倒・骨折が怖い</p>
+      <div class="onayami-card">
+        <img src="img/onayami4.jpg" alt="転倒・骨折が怖い" class="onayami-img" />
+        <div class="onayami-body">転倒・骨折が怖い</div>
       </div>
-      <div class="problem-card">
-        <span class="problem-icon">💸</span>
-        <p>詐欺・悪徳商法に引っかからないか</p>
+      <div class="onayami-card">
+        <img src="img/onayami5.jpg" alt="詐欺・悪徳商法に引っかからないか" class="onayami-img" />
+        <div class="onayami-body">詐欺・悪徳商法に引っかからないか</div>
       </div>
-      <div class="problem-card">
-        <span class="problem-icon">😔</span>
-        <p>一人でいて寂しくしていないか</p>
+      <div class="onayami-card">
+        <img src="img/onayami6.jpg" alt="一人でいて寂しくしていないか" class="onayami-img" />
+        <div class="onayami-body">一人でいて寂しくしていないか</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- サービス一覧 -->
-<section class="services" id="services">
+<!-- ③ 代表の想い（Story） -->
+<section class="story" id="story">
   <div class="container">
-    <p class="section-label">私たちのサービス</p>
-    <h2 class="section-title">えがおの3つのサービス</h2>
-    <div class="service-cards">
+    <div class="story-inner">
 
-      <div class="service-card featured">
-        <div class="service-badge">おすすめ</div>
-        <div class="service-icon">✉️</div>
-        <h3>あなたへえがお便</h3>
-        <p class="service-tag">高齢者おしゃべり訪問・オンライン</p>
-        <p class="service-desc">
-          スタッフがご自宅を訪問または<br class="sp-br" />オンラインで、楽しくお話し相手をしながら、<br />
-          ご家族へ「見守りレポート」をお届けします。<br class="sp-br" />おしゃべりの裏で11項目の<br class="sp-br" />安心サポートが機能します。
-        </p>
-        <a href="#features" class="btn-service">詳しく見る</a>
+      <!-- 代表者写真：準備中のため一時非表示 -->
+      <div class="story-photo" style="display:none;">
+        <div class="story-photo-frame">
+          <span class="story-photo-emoji">👩</span>
+          <p class="story-photo-caption">代表者写真<br />（準備中）</p>
+        </div>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">🤝</div>
-        <h3>えがおマッチ</h3>
-        <p class="service-tag">一般と高齢者のマッチングサービス</p>
-        <p class="service-desc">
-          地域の人々と高齢者をつなぐ<br class="sp-br" />マッチングサービスです。<br />
-          「話し相手になりたい」という<br class="sp-br" />気持ちを持つ一般の方と、<br />
-          高齢者の方を温かくつなぎます。
-        </p>
-        <a href="#contact" class="btn-service">詳しく聞く</a>
-      </div>
+      <div class="story-content">
+        <p class="section-label story-label">代表の想い</p>
+        <h2 class="story-heading">笑顔のある毎日を<br class="sp-only" /><em>離れていても。</em>
+        </h2>
 
-      <div class="service-card">
-        <div class="service-icon">🎓</div>
-        <h3>シニア傾聴師<br />資格講座</h3>
-        <p class="service-tag">おしゃべりを仕事にするオンラインスクール</p>
-        <p class="service-desc">
-          「おしゃべりを仕事にしたい」という<br class="sp-br" />方のためのオンライン資格講座。<br />
-          シニア傾聴師として活躍するための<br class="sp-br" />スキルを身につけられます。
+        <p class="story-paragraph">ただ見守るだけじゃない。<br />おしゃべりで、笑顔を引き出す。
         </p>
-        <a href="#contact" class="btn-service">詳しく聞く</a>
+        <p class="story-paragraph">ご家族の「安心」と、お年寄りの「笑顔」を、<br />同時に叶えます。
+        </p>
+        <p class="story-paragraph">地域に根差したサービスとして、<br />皆様の<strong>「心の架け橋」</strong>となれるよう、<br />誠心誠意努めてまいります。
+        </p>
+
+        <div class="story-signature">
+          <div class="story-sig-avatar">👩</div>
+          <div>
+            <p class="story-sig-name">代表　上田 黎樹（うえだ れいじゅ）</p>
+            <p class="story-sig-role">あなたへえがお 代表 ／ シニア傾聴師</p>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- サポート内容（あなたへえがお便） -->
-<section class="features" id="features">
+<!-- ④ 11安心サポート（画像枠カードグリッド） -->
+<section class="support-v5" id="support">
   <div class="container">
-    <p class="section-label">あなたへえがお便</p>
-    <h2 class="section-title">11項目の安心サポート</h2>
-    <p class="section-desc">ただのおしゃべりではありません。<br class="sp-br" />会話の中に、ご家族を安心させる<br class="sp-br" />仕組みが詰まっています。</p>
+    <div class="support-intro">
+      <p class="section-label">あなたへえがお便</p>
+      <h2 class="section-title">11項目の<br class="sp-only" />安心サポート</h2>
+      <p class="section-desc">ただのおしゃべりではありません。<br />会話の中に、ご家族を安心させる仕組みが<br />詰まっています。</p>
+    </div>
 
-    <div class="features-grid">
+    <div class="support-cards-v5">
 
-      <div class="feature-item">
-        <div class="feature-num">01</div>
-        <div class="feature-body">
-          <h4>家族への「見守りレポート」</h4>
-          <p>顔色・認知症のサイン・冷蔵庫の中などを<br class="sp-br" />チェックし、毎回詳細なレポートを<br class="sp-br" />離れて暮らすご家族へお届けします。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0041.PNG" alt="スタッフが毎回チェック" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">01</p>
+          <h3 class="support-card-title">ご家族がホッとする、安心の定期報告</h3>
+          <p class="support-card-desc">顔色・認知症のサイン・冷蔵庫の中などをチェックし毎回詳細なレポートを離れて暮らすご家族へお届けします。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">02</div>
-        <div class="feature-body">
-          <h4>家族への「行動レポート」</h4>
-          <p>「今から行きます」「着きました」<br class="sp-br" />「終わりました」とリアルタイムに報告。<br class="sp-br" />会話場面の録画もお送りします。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0055.PNG" alt="リアルタイム報告" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">02</p>
+          <h3 class="support-card-title">ご家族と一緒に見守る、暮らしの記録</h3>
+          <p class="support-card-desc">「今から行きます」「着きました」「終わりました」とリアルタイムに報告。<br />会話場面の録画もお送りします。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">03</div>
-        <div class="feature-body">
-          <h4>お薬カレンダーのチェック</h4>
-          <p>今日の薬が飲まれているかを<br class="sp-br" />カレンダーで確認し、ご家族へ報告。<br class="sp-br" />薬の飲み忘れという大きな悩みを解決します。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0042.PNG" alt="薬の飲み忘れを防ぐ" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">03</p>
+          <h3 class="support-card-title">うっかり防止！安心のお薬サポート</h3>
+          <p class="support-card-desc">今日の薬が飲まれているかをカレンダーで確認し、ご家族へ報告。<br />薬の飲み忘れという大きな悩みを解決します。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">04</div>
-        <div class="feature-body">
-          <h4>スマホレッスン</h4>
-          <p>会話の中でスマホの使い方をレッスン。<br class="sp-br" />目標は「子供・孫とLINEテレビ電話が<br class="sp-br" />できるようになること」です。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0043.PNG" alt="孫とビデオ通話できた！" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">04</p>
+          <h3 class="support-card-title">｢できた！｣が増える、ゆっくりスマホ相談</h3>
+          <p class="support-card-desc">会話の中でスマホの使い方をレッスン。<br />目標は「子供・孫とLINEテレビ電話ができるようになること」です。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">05</div>
-        <div class="feature-body">
-          <h4>おつかい代行</h4>
-          <p>お水やお米など重いものを<br class="sp-br" />スタッフが訪問の途中に購入して<br class="sp-br" />お届けします（商品代は実費）。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0045.PNG" alt="重いものはお任せ" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">05</p>
+          <h3 class="support-card-title">重い荷物はお任せ！街の買い物お助け隊</h3>
+          <p class="support-card-desc">お水やお米など重いものをスタッフが訪問の途中に購入してお届けします。（※商品代は実費）</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">06</div>
-        <div class="feature-body">
-          <h4>昔の思い出レポート</h4>
-          <p>会話で出た「若い頃の楽しかった話」<br class="sp-br" />「子育ての思い出」を記録し、<br class="sp-br" />月1回ご家族へお届けします。<br class="sp-br" />エンディングノートの代わりにもなります。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0046.PNG" alt="懐かしい思い出を記録" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">06</p>
+          <h3 class="support-card-title">あなたの｢思い出話｣を形にするレポート</h3>
+          <p class="support-card-desc">会話で出た「若い頃の楽しかった話」「子育ての思い出」を記録し、月1回ご家族へお届けします。<br />エンディングノートの代わりにもなります。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">07</div>
-        <div class="feature-body">
-          <h4>詐欺・悪徳商法の防犯チェック</h4>
-          <p>「最近変な電話はありましたか？」などの<br class="sp-br" />会話から不審な郵便物・請求書をチェック。<br class="sp-br" />不審な点があれば即座に<br class="sp-br" />ご家族へアラートを出します。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0047.PNG" alt="詐欺から守る" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">07</p>
+          <h3 class="support-card-title">大切なお金と暮らしを守る、防犯の盾</h3>
+          <p class="support-card-desc">「最近変な電話はありましたか？」などの会話から不審な郵便物・請求書をチェック。不審な点があれば即座にご家族へアラートを出します。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">08</div>
-        <div class="feature-body">
-          <h4>転倒防止の導線チェック</h4>
-          <p>足元の延長コードや滑りやすいマットなど、<br class="sp-br" />転倒・骨折の原因になるものを確認し、<br class="sp-br" />安全な場所へ移動します。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0048.PNG" alt="転倒・骨折を未然に防ぐ" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">08</p>
+          <h3 class="support-card-title">つまずきゼロ！自宅を一番安全な場所に</h3>
+          <p class="support-card-desc">足元の延長コードや滑りやすいマットなど、転倒・骨折の原因になるものを確認し、安全な場所へ移動します。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">09</div>
-        <div class="feature-body">
-          <h4>防災グッズ・備蓄チェック</h4>
-          <p>月1回、非常食・水の賞味期限や<br class="sp-br" />懐中電灯の電池を確認。<br class="sp-br" />「いざという時も大丈夫」という<br class="sp-br" />安心をご家族へお届けします。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0049.PNG" alt="いざという時も安心" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">09</p>
+          <h3 class="support-card-title">地震や台風が来ても怖くない<br />備えの点検</h3>
+          <p class="support-card-desc">月1回、非常食・水の賞味期限や懐中電灯の電池を確認。「いざという時も大丈夫」という安心をご家族へお届けします。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">10</div>
-        <div class="feature-body">
-          <h4>栄養の偏りレポート</h4>
-          <p>「この1週間、何を食べましたか？」という<br class="sp-br" />会話から食事内容を把握し、<br class="sp-br" />栄養の偏りをご家族へ報告。<br class="sp-br" />親の健康寿命を延ばします。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0053.PNG" alt="食事内容を把握" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">10</p>
+          <h3 class="support-card-title">美味しく食べて健康に！<br />お皿の栄養チェック</h3>
+          <p class="support-card-desc">「この1週間、何を食べましたか？」という会話から食事内容を把握し、栄養の偏りをご家族へ報告。健康寿命を延ばしていきます。</p>
         </div>
       </div>
 
-      <div class="feature-item">
-        <div class="feature-num">11</div>
-        <div class="feature-body">
-          <h4>写真整理・生前整理サポート</h4>
-          <p>昔のアルバムを一緒に見ながらおしゃべり。<br class="sp-br" />写真のデータ化や整理も少しずつ進めます。<br class="sp-br" />子供世代が悩む「実家の片付け」を<br class="sp-br" />自然に解決します。</p>
+      <div class="support-card-v5">
+        <div class="support-card-img">
+          <img src="images/img_0054.PNG" alt="アルバムを一緒に整理" class="support-card-photo">
+        </div>
+        <div class="support-card-body">
+          <p class="support-card-num">11</p>
+          <h3 class="support-card-title">大切にしたいものだけ残す、まごころ整理</h3>
+          <p class="support-card-desc">昔のアルバムを一緒に見ながらおしゃべり。<br />写真のデータ化や整理も少しずつ進めます。子供世代が悩む「実家の片付け」を自然に解決します。</p>
         </div>
       </div>
 
@@ -247,197 +305,201 @@
   </div>
 </section>
 
-<!-- 料金 -->
-<section class="price" id="price">
+
+<!-- 対象エリア（コンパクト） -->
+<div class="area-compact">
   <div class="container">
-    <p class="section-label">料金プラン</p>
-    <h2 class="section-title">あなたへえがお便<br />料金プラン</h2>
-
-    <div class="price-tables">
-
-      <div class="price-block">
-        <h3 class="price-block-title">訪問 /（50分）</h3>
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th>プラン</th>
-              <th>月額</th>
-              <th>1回あたり</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="プラン">週1回（月4回）</td>
-              <td class="price-amount" data-label="月額">¥18,000</td>
-              <td data-label="1回あたり">¥4,500</td>
-            </tr>
-            <tr class="price-popular">
-              <td data-label="プラン">週2回（月8回）<span class="popular-badge">人気</span></td>
-              <td class="price-amount" data-label="月額">¥33,000</td>
-              <td data-label="1回あたり">¥4,125</td>
-            </tr>
-            <tr>
-              <td data-label="プラン">週3回（月12回）</td>
-              <td class="price-amount" data-label="月額">¥44,000</td>
-              <td data-label="1回あたり">¥3,666</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="area-compact-inner">
+      <span class="area-compact-icon">📍</span>
+      <div class="area-compact-text">
+        <p class="area-compact-name">現在のサービスエリア<br>兵庫県 宝塚市内 全域</p>
+        <p class="area-compact-note">※宝塚市外の近隣エリアへの拡大も順次検討中です。<br>現時点では宝塚市内のみの訪問対応となりますのでご了承ください。</p>
       </div>
-
-      <div class="price-block">
-        <h3 class="price-block-title">訪問 + オンライン（30分）混合プラン</h3>
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th>プラン</th>
-              <th>月額</th>
-              <th>内容</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="price-popular">
-              <td data-label="プラン">ハイブリッドプラン<span class="popular-badge">おすすめ</span></td>
-              <td class="price-amount" data-label="月額">¥8,900</td>
-              <td data-label="内容">週2回 × 30分（月8回）<br />うち月1回は訪問・残り7回はオンライン</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
     </div>
-
-    <p class="price-note">※ おつかい代行の商品代は実費となります。<br />※ 詳しい料金・エリアについてはお気軽にご相談ください。</p>
-
-    <div class="price-cta">
-      <a href="#contact" class="btn-primary">まずは無料相談する</a>
+    <div class="area-map-wrap">
+      <p class="area-map-label">現在のサービスエリア</p>
+      <iframe
+        src="https://maps.google.com/maps?q=宝塚市&output=embed"
+        width="100%"
+        height="300"
+        style="border-radius:12px; border:none;"
+        loading="lazy">
+      </iframe>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ご利用の流れ -->
+<!-- ⑤ ご利用の流れ -->
 <section class="flow" id="flow">
   <div class="container">
     <p class="section-label">ご利用の流れ</p>
-    <h2 class="section-title">お申し込みから<br />サービス開始まで</h2>
+    <h2 class="section-title">お申し込みから<br class="sp-only" />サービス開始まで</h2>
     <p class="section-desc">初めての方も安心。丁寧にご案内します。</p>
     <div class="flow-steps">
 
       <div class="flow-step">
         <div class="flow-num">1</div>
-        <div class="flow-icon">📞</div>
         <h4>お問い合わせ</h4>
-        <p>お電話・LINE・フォームから<br class="sp-br" />お気軽にご連絡ください。<br class="sp-br" />サービス内容や不明な点をご説明します。</p>
+        <p>お電話・LINE・お問い合わせフォームから<br />お気軽にご連絡ください。<br />サービス内容や不明な点をご説明します。</p>
       </div>
 
       <div class="flow-arrow">▼</div>
 
       <div class="flow-step">
         <div class="flow-num">2</div>
-        <div class="flow-icon">📋</div>
         <h4>情報のご登録</h4>
-        <p>お名前・電話番号・メールアドレスなど、<br class="sp-br" />基本情報をご登録いただきます。</p>
+        <p>お名前・電話番号・メールアドレスなど、<br />基本情報をご登録いただきます。</p>
       </div>
 
       <div class="flow-arrow">▼</div>
 
       <div class="flow-step">
         <div class="flow-num">3</div>
-        <div class="flow-icon">💬</div>
-        <h4>打ち合わせ・<br />プラン確定</h4>
-        <p>ご希望の頻度や内容をお伺いし、ぴったりのプランをご提案します。</p>
+        <h4>打ち合わせ・プラン確定</h4>
+        <p>ご希望の頻度や内容をお伺いし、<br />ぴったりのプランをご提案します。</p>
       </div>
 
       <div class="flow-arrow">▼</div>
 
       <div class="flow-step">
         <div class="flow-num">4</div>
-        <div class="flow-icon">💳</div>
         <h4>料金のお支払い</h4>
-        <p>銀行振込にて前払いを<br class="sp-br" />お願いしております。<br class="sp-br" />入金確認後に正式なご予約確定となります。</p>
+        <p>銀行振込にて前払いをお願いしております。<br />入金確認後に正式なご予約確定となります。</p>
       </div>
 
       <div class="flow-arrow">▼</div>
 
       <div class="flow-step">
         <div class="flow-num">5</div>
-        <div class="flow-icon">😊</div>
         <h4>サービス開始</h4>
-        <p>お約束の日時にスタッフが訪問。<br class="sp-br" />心を込めておしゃべりや<br class="sp-br" />サポートをいたします。</p>
+        <p>お約束の日時にスタッフが訪問。<br />心を込めてサポートをいたします。</p>
       </div>
 
     </div>
+    <div class="section-cta">
+      <a href="#contact" class="btn-primary cta-btn">まずは無料相談する</a>
+    </div>
   </div>
 </section>
 
-<!-- 対象エリア -->
-<section class="area" id="area">
-  <div class="container">
-    <p class="section-label">対象エリア</p>
-    <h2 class="section-title">現在のサービスエリア</h2>
-    <div class="area-box">
-      <div class="area-icon">📍</div>
-      <div class="area-body">
-        <h3 class="area-name">兵庫県 宝塚市内 全域</h3>
-        <p class="area-note">※ 宝塚市外の近隣エリアへの拡大も順次検討中です。<br />現時点では市内のみの訪問対応となりますのでご了承ください。</p>
+<!-- ⑥ FAQ + 料金 -->
+<div class="faq-price-block">
+
+  <!-- よくあるご質問 -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="section-label">よくあるご質問</p>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">どんなスタッフが来ますか？</summary>
+          <p class="faq-a">当社の研修を受けた、傾聴スキルを持つスタッフが伺います。<br />プライバシーを厳守し、安心してお話しいただけるよう誠実に対応いたします。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">おしゃべりが苦手でも大丈夫ですか？</summary>
+          <p class="faq-a">もちろん大丈夫です。<br />スタッフがお客様のペースに合わせてお話を引き出しますので、無理に話す必要はありません。ふと思い出したことなど、なんでも自由にお話しください。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">お茶やお菓子の準備は必要ですか？</summary>
+          <p class="faq-a">一切不要です。<br />お気遣いなく、リラックスした状態でお待ちください。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">会話の内容はすべて家族に報告されますか？</summary>
+          <p class="faq-a">ご家族へは「お元気に過ごされていたか」<br />「健康状態に変化はないか」といった見守り内容を報告します。<br />会話の内容は尊厳を守るためプライバシーに十分配慮いたします。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">支払い方法を教えてください。</summary>
+          <p class="faq-a">銀行振込による前払い方式を採用しております。<br />詳細はお申し込み時にご案内いたします。</p>
+        </details>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- よくあるご質問 -->
-<section class="faq" id="faq">
-  <div class="container">
-    <p class="section-label">よくあるご質問</p>
-    <h2 class="section-title">FAQ</h2>
-    <div class="faq-list">
+  <div class="section-divider"></div>
 
-      <details class="faq-item">
-        <summary class="faq-q">どんなスタッフが来ますか？</summary>
-        <p class="faq-a">当社の研修を受けた、傾聴スキルを持つ<br class="sp-br" />スタッフが伺います。プライバシーを厳守し、<br class="sp-br" />安心してお話しいただけるよう<br class="sp-br" />誠実に対応いたします。</p>
-      </details>
+  <!-- 料金プラン -->
+  <section class="price" id="price">
+    <div class="container">
+      <p class="section-label">料金プラン</p>
+      <h2 class="section-title">あなたへえがお便<br class="sp-only" />料金プラン</h2>
 
-      <details class="faq-item">
-        <summary class="faq-q">おしゃべりが苦手でも大丈夫ですか？</summary>
-        <p class="faq-a">もちろん大丈夫です。<br class="sp-br" />スタッフがお客様のペースに合わせて<br class="sp-br" />お話を引き出しますので、<br class="sp-br" />無理に話す必要はありません。<br class="sp-br" />ふと思い出したことなど、<br class="sp-br" />なんでも自由にお話しください。</p>
-      </details>
+      <!-- 訪問プラン 3カード -->
+      <div class="price-cards-row">
 
-      <details class="faq-item">
-        <summary class="faq-q">お茶やお菓子の準備は必要ですか？</summary>
-        <p class="faq-a">一切不要です。お気遣いなく、リラックスした状態でお待ちください。</p>
-      </details>
+        <div class="price-card fade-in">
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週1回プラン</p>
+          <p class="price-card-freq">月4回</p>
+          <p class="price-card-amount">¥18,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥4,500</p>
+        </div>
 
-      <details class="faq-item">
-        <summary class="faq-q">会話の内容はすべて家族に報告されますか？</summary>
-        <p class="faq-a">ご家族へは「お元気に過ごされていたか」<br class="sp-br" />「健康状態に変化はないか」といった<br class="sp-br" />見守り内容を報告します。<br class="sp-br" />会話の内容は尊厳を守るため<br class="sp-br" />プライバシーに十分配慮いたします。</p>
-      </details>
+        <div class="price-card price-card-popular fade-in">
+          <span class="price-card-badge">人気</span>
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週2回プラン</p>
+          <p class="price-card-freq">月8回</p>
+          <p class="price-card-amount">¥33,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥4,125</p>
+        </div>
 
-      <details class="faq-item">
-        <summary class="faq-q">支払い方法を教えてください。</summary>
-        <p class="faq-a">銀行振込による前払い方式を<br class="sp-br" />採用しております。<br class="sp-br" />詳細はお申し込み時にご案内いたします。</p>
-      </details>
+        <div class="price-card fade-in">
+          <p class="price-card-type">訪問（50分）</p>
+          <p class="price-card-plan">週3回プラン</p>
+          <p class="price-card-freq">月12回</p>
+          <p class="price-card-amount">¥44,000<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">1回あたり ¥3,666</p>
+        </div>
 
+      </div>
+
+      <!-- ハイブリッドプラン（おすすめ・中央） -->
+      <div class="price-cards-row price-cards-row-center">
+
+        <div class="price-card price-card-recommend fade-in">
+          <span class="price-card-badge price-card-badge-recommend">おすすめ</span>
+          <p class="price-card-type">訪問 + オンライン（30分）混合</p>
+          <p class="price-card-plan">ハイブリッドプラン</p>
+          <p class="price-card-freq">月8回（うち月1回訪問・7回オンライン）</p>
+          <p class="price-card-amount">¥8,900<span class="price-card-unit">/月</span></p>
+          <p class="price-card-per">週2回 × 30分</p>
+        </div>
+
+      </div>
+
+      <p class="price-note">※ おつかい代行の商品代は実費となります。<br />※ 詳しい料金・エリアについては<br />お気軽にご相談ください。</p>
+
+      <div class="price-cta">
+        <a href="#contact" class="btn-primary cta-btn">まずは無料相談する</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- お問い合わせ -->
+</div>
+
+<!-- ⑦ お問い合わせ -->
 <section class="contact" id="contact">
   <div class="container">
     <p class="section-label">お問い合わせ</p>
-    <h2 class="section-title">まずはお気軽に<br />ご相談ください</h2>
-    <p class="section-desc">無料相談を承っております。お電話・LINE・フォームからどうぞ。</p>
+    <h2 class="section-title">まずはお気軽に<br class="sp-only" />ご相談ください</h2>
+    <p class="section-desc">無料相談を承っております。<br />お電話・LINE・フォームからどうぞ。</p>
 
     <div class="contact-options">
-      <a href="tel:0120-000-000" class="contact-card contact-tel">
+      <a href="tel:08063146098" class="contact-card contact-tel">
         <span class="contact-icon">📞</span>
         <div>
           <p class="contact-label">お電話でのご相談</p>
-          <p class="contact-info">0120-000-000</p>
+          <p class="contact-info">080-6314-6098</p>
           <p class="contact-hours">受付時間 9:00〜18:00（土日祝除く）</p>
         </div>
       </a>
-      <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener" class="contact-card contact-line">
+      <a href="https://lin.ee/qoJ7zUx" target="_blank" rel="noopener" class="contact-card contact-line">
         <span class="contact-icon">💬</span>
         <div>
           <p class="contact-label">LINEでのご相談</p>
@@ -451,32 +513,32 @@
       <h3 class="form-title">お問い合わせフォーム</h3>
       <div class="form-row">
         <label for="name">お名前 <span class="required">必須</span></label>
-        <input type="text" id="name" name="name" placeholder="山田 花子" required />
+        <input type="text" id="name" name="entry.738599201" placeholder="山田 花子" required />
       </div>
       <div class="form-row">
         <label for="phone">電話番号</label>
-        <input type="tel" id="phone" name="phone" placeholder="090-0000-0000" />
+        <input type="tel" id="phone" name="entry.1930308041" placeholder="090-0000-0000" />
       </div>
       <div class="form-row">
         <label for="email">メールアドレス <span class="required">必須</span></label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required />
-      </div>
-      <div class="form-row">
-        <label for="service">ご興味のあるサービス</label>
-        <select id="service" name="service">
-          <option value="">選択してください</option>
-          <option value="egaobinn">あなたへえがお便</option>
-          <option value="match">えがおマッチ</option>
-          <option value="school">シニア傾聴師 資格講座</option>
-          <option value="other">その他・分からない</option>
-        </select>
+        <input type="email" id="email" name="entry.1420384703" placeholder="example@email.com" required />
       </div>
       <div class="form-row">
         <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+        <textarea id="message" name="entry.1886232057" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
       </div>
+      <div id="formSuccess" style="display:none; color:#2e7d32; font-weight:bold; margin-bottom:12px;">送信しました。ありがとうございます！</div>
       <button type="submit" class="btn-submit">送信する</button>
     </form>
+  </div>
+</section>
+
+<!-- 最後の一押し CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-cta-heading">一人で抱え込まないでください。</h2>
+    <p class="final-cta-sub">まずお話を聞かせてください。<br>無料相談は何度でもOKです。</p>
+    <a href="#contact" class="btn-primary cta-btn final-cta-btn">無料相談してみる</a>
   </div>
 </section>
 
@@ -485,17 +547,17 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="logo.png" alt="あなたへえがお" class="logo-img footer-logo-img" />
-        <p class="footer-tagline">笑顔のある毎日を、離れていても。</p>
+        <img src="logo.jpg" alt="あなたへえがお" class="logo-img footer-logo-img" />
+        <p class="footer-tagline">笑顔のある毎日を離れていても。</p>
       </div>
       <div class="footer-links">
-        <a href="#services">サービス一覧</a>
-        <a href="#features">サポート内容</a>
+        <a href="#story">代表の想い</a>
+        <a href="#support">安心サポート</a>
         <a href="#price">料金</a>
         <a href="#contact">お問い合わせ</a>
       </div>
     </div>
-    <p class="footer-copy">&copy; 2024 あなたへえがお All Rights Reserved.</p>
+    <p class="footer-copy">&copy; 2026 あなたへえがお All Rights Reserved.</p>
   </div>
 </footer>
 
@@ -510,6 +572,34 @@
     spNav.classList.remove('open');
     hamburger.classList.remove('active');
   }
+
+  // スティッキーヘッダー：スクロール中のみ表示、停止1.5秒後に非表示
+  const header = document.querySelector('.header');
+  let hideTimer = null;
+
+  function showHeader() {
+    header.classList.remove('header-hidden');
+  }
+  function scheduleHide() {
+    if (hideTimer) clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-hidden');
+      }
+    }, 1500);
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+      showHeader();
+      scheduleHide();
+    } else {
+      // ページ最上部に戻ったら常に表示
+      header.classList.remove('scrolled', 'header-hidden');
+      if (hideTimer) clearTimeout(hideTimer);
+    }
+  }, { passive: true });
 
   // ヒーロー背景スライドショー（ふわっとフェード）
   const slides = document.querySelectorAll('.hero-slide');
@@ -530,7 +620,91 @@
       }
     });
   });
+
+  // Intersection Observer フェードイン
+  const fadeTargets = document.querySelectorAll(
+    '.section-title, .section-label, .section-desc, ' +
+    '.onayami-card, ' +
+    '.story-photo, .story-heading, .story-paragraph, .story-signature, ' +
+    '.support-card-v5, ' +
+    '.feature-card, ' +
+    '.flow-step, .flow-arrow, ' +
+    '.faq-item, ' +
+    '.price-card, .price-note, ' +
+    '.area-compact-inner, ' +
+    '.contact-card'
+  );
+
+  fadeTargets.forEach(el => el.classList.add('fade-in'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeTargets.forEach(el => observer.observe(el));
+
+  // スクロールインジケーター：ヒーローが画面外に出たら非表示
+  const scrollIndicator = document.getElementById('scrollIndicator');
+  const heroSection = document.querySelector('.hero');
+
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrollIndicator.classList.remove('scroll-indicator-hidden');
+      } else {
+        scrollIndicator.classList.add('scroll-indicator-hidden');
+      }
+    });
+  }, { threshold: 0 });
+
+  heroObserver.observe(heroSection);
+
+  // ヒーロー白幕：スクロール量に応じて下から上へ伸びる
+  const heroWhiteOverlay = document.getElementById('heroWhiteOverlay');
+
+  window.addEventListener('scroll', () => {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollY = window.scrollY;
+    const progress = Math.min(scrollY / heroHeight, 1);
+    heroWhiteOverlay.style.height = (progress * 70) + '%';
+  }, { passive: true });
+
+  // お問い合わせフォーム送信
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLScUSaGsRXdhL99pGps8xZKtnAzET4Z776Zli0iOK8cKXsj0dQ/formResponse', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      contactForm.reset();
+    }).catch(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      contactForm.reset();
+    });
+  });
 </script>
+
+
+<!-- スマホ固定CTAボタン（FAB） -->
+<div class="sp-fab">
+  <a href="tel:08063146098" class="sp-fab-btn">
+    <i class="fa-solid fa-phone sp-fab-icon"></i>
+    <div class="sp-fab-text">
+      <span class="sp-fab-label">電話で無料相談</span>
+      <span class="sp-fab-number">080-6314-6098</span>
+      <span class="sp-fab-hours">受付：9時〜18時（土日祝除く）</span>
+    </div>
+  </a>
+</div>
 
 </body>
 </html>
